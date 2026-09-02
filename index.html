@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Hibah Kedokteran Tropis - PKT UGM</title>
+<meta name="description" content="Katalog 43 skema pendanaan riset kedokteran tropis dan kesehatan global untuk Center for Tropical Medicine, FK-KMK UGM. Tenggat terverifikasi, siklus tahunan, dan pipeline tim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#123430;
+  --ink-soft:#4E6A65;
+  --ink-faint:#7C918D;
+  --paper:#E4E9E3;
+  --surface:#FAFBF8;
+  --surface-2:#EFF2ED;
+  --line:#C2CCC3;
+  --line-soft:#D8DFD8;
+  --signal:#A96A07;
+  --alert:#8C2E24;
+  --calm:#3F6B8C;
+  --closed:#8C948F;
+  --focus:#123430;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#DDE6E1;
+    --ink-soft:#9FB3AE;
+    --ink-faint:#748782;
+    --paper:#10201E;
+    --surface:#162926;
+    --surface-2:#1D332F;
+    --line:#2E4642;
+    --line-soft:#243B37;
+    --signal:#D9A24B;
+    --alert:#D97B6E;
+    --calm:#7FA8C4;
+    --closed:#6C7B77;
+    --focus:#D9A24B;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#DDE6E1; --ink-soft:#9FB3AE; --ink-faint:#748782;
+  --paper:#10201E; --surface:#162926; --surface-2:#1D332F;
+  --line:#2E4642; --line-soft:#243B37;
+  --signal:#D9A24B; --alert:#D97B6E; --calm:#7FA8C4; --closed:#6C7B77; --focus:#D9A24B;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.55;
+}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- masthead ---------- */
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+.mast{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;padding:26px 0 18px}
+h1{
+  font-family:Newsreader,Georgia,serif;font-weight:500;font-size:clamp(28px,4.4vw,44px);
+  line-height:1.05;margin:0;letter-spacing:-.01em;
+}
+.sub{margin:6px 0 0;max-width:56ch;color:var(--ink-soft);font-size:14.5px}
+.mast-meta{font-size:13px;color:var(--ink-faint);text-align:right;line-height:1.4}
+.themetog{background:none;border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12px;color:var(--ink-soft);margin-top:8px}
+
+/* ---------- year strip ---------- */
+.strip-shell{background:var(--surface);border-bottom:1px solid var(--line);padding:0 0 22px}
+.strip-head{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink-faint);margin-bottom:9px}
+.strip{position:relative;height:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line-soft)}
+.strip-month{position:absolute;top:0;bottom:0;border-left:1px solid var(--line-soft);font-size:10.5px;color:var(--ink-faint);padding:3px 0 0 4px;white-space:nowrap}
+.strip-month:first-child{border-left:none}
+.tick{position:absolute;bottom:0;width:3px;border-radius:2px 2px 0 0;background:var(--calm);cursor:pointer;border:none;padding:0}
+.tick.t-open{background:var(--signal)}
+.tick.t-urgent{background:var(--alert)}
+.tick:hover,.tick:focus-visible{width:5px}
+.strip-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin-top:9px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+/* ---------- tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.tabrow{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabrow::-webkit-scrollbar{display:none}
+.tab{background:none;border:none;padding:13px 14px;font-size:14px;color:var(--ink-soft);white-space:nowrap;border-bottom:2px solid transparent;font-weight:500}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+
+main{padding:26px 0 70px}
+.panel[hidden]{display:none}
+h2{font-family:Newsreader,Georgia,serif;font-weight:500;font-size:24px;margin:0 0 4px;letter-spacing:-.005em}
+.lede{color:var(--ink-soft);font-size:14px;margin:0 0 18px;max-width:70ch}
+.sec{margin-bottom:38px}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+input[type=search],select,input[type=text],input[type=date],textarea{
+  font:inherit;font-size:14px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--line);border-radius:3px;padding:7px 9px;
+}
+input[type=search]{min-width:220px;flex:1 1 240px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--ink-soft)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{font-size:13px;color:var(--ink-faint);margin-left:auto}
+
+/* ---------- entries ---------- */
+.list{border-top:1px solid var(--line)}
+.entry{display:grid;grid-template-columns:96px 1fr;gap:0;border-bottom:1px solid var(--line-soft);background:var(--surface)}
+.entry:nth-child(even){background:var(--surface-2)}
+.when{
+  padding:16px 12px 16px 14px;border-left:3px solid var(--calm);
+  font-size:13px;color:var(--ink-soft);line-height:1.35;
+}
+.entry.e-open .when{border-left-color:var(--signal)}
+.entry.e-urgent .when{border-left-color:var(--alert)}
+.entry.e-closed .when{border-left-color:var(--closed)}
+.when b{display:block;font-family:Newsreader,Georgia,serif;font-size:20px;font-weight:500;color:var(--ink);line-height:1.1}
+.when .rel{display:block;margin-top:3px;font-size:12px}
+.entry.e-urgent .when .rel{color:var(--alert);font-weight:600}
+.body{padding:15px 16px 16px 14px;min-width:0}
+.body h3{margin:0 0 3px;font-size:16px;font-weight:600;line-height:1.3}
+.body h3 a{text-decoration:none;border-bottom:1px solid var(--line)}
+.body h3 a:hover{border-bottom-color:var(--ink)}
+.funder{font-size:13px;color:var(--ink-soft);margin:0 0 8px}
+.note{font-size:13.5px;color:var(--ink-soft);margin:0 0 9px;max-width:78ch}
+.warn{border-left:2px solid var(--alert);padding-left:9px;color:var(--ink);font-size:13px;margin:0 0 9px;max-width:78ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{font-size:11.5px;color:var(--ink-soft);border:1px solid var(--line);border-radius:2px;padding:2px 6px}
+.tag.v-resmi{border-color:var(--calm);color:var(--calm)}
+.tag.v-sekunder{border-color:var(--signal);color:var(--signal)}
+.tag.v-belum{border-color:var(--alert);color:var(--alert)}
+.tag.fit3{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.addbtn{background:none;border:1px solid var(--line);border-radius:3px;padding:3px 9px;font-size:12px;color:var(--ink-soft);margin-left:auto}
+.addbtn:hover{border-color:var(--ink);color:var(--ink)}
+.empty{padding:34px 4px;color:var(--ink-faint);font-size:14px}
+
+/* ---------- cycle table ---------- */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;font-size:12.5px;color:var(--ink-faint);border-bottom:1px solid var(--line);padding:8px 10px 8px 0}
+td{border-bottom:1px solid var(--line-soft);padding:10px 10px 10px 0;vertical-align:top}
+td.mon{color:var(--ink-soft);white-space:nowrap;font-size:13px}
+
+/* ---------- pipeline ---------- */
+.pipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:6px}
+.col{background:var(--surface);border:1px solid var(--line-soft);border-top:2px solid var(--line);border-radius:3px;padding:11px}
+.col h4{margin:0 0 9px;font-size:12.5px;font-weight:600;color:var(--ink-soft)}
+.card{border:1px solid var(--line-soft);border-radius:3px;padding:9px 10px;margin-bottom:8px;background:var(--paper);font-size:13.5px}
+.card strong{display:block;font-size:13.5px;font-weight:600;margin-bottom:2px}
+.card .meta{color:var(--ink-faint);font-size:12px}
+.card-act{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap}
+.mini{background:none;border:1px solid var(--line);border-radius:2px;padding:2px 7px;font-size:11.5px;color:var(--ink-soft)}
+.mini:hover{border-color:var(--ink);color:var(--ink)}
+.form-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.btn{background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:3px;padding:8px 15px;font-size:14px;font-weight:500}
+.btn.ghost{background:none;color:var(--ink)}
+
+/* ---------- prose ---------- */
+.prose{max-width:70ch;font-size:14.5px}
+.prose p{margin:0 0 13px}
+.prose h3{font-family:Newsreader,Georgia,serif;font-weight:500;font-size:18px;margin:24px 0 7px}
+.prose ul{margin:0 0 13px;padding-left:19px}
+.prose li{margin-bottom:6px}
+.prose code{background:var(--surface-2);padding:1px 5px;border-radius:2px;font-size:13px}
+pre{background:var(--surface);border:1px solid var(--line-soft);border-radius:3px;padding:12px;overflow-x:auto;font-size:12.5px;line-height:1.5}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 17px;border-radius:3px;font-size:13.5px;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
+.toast.on{opacity:1}
+
+@media (max-width:640px){
+  .entry{grid-template-columns:1fr}
+  .when{border-left-width:3px;border-bottom:1px solid var(--line-soft);padding:11px 14px;display:flex;align-items:baseline;gap:9px}
+  .when b{display:inline;font-size:17px}
+  .when .rel{display:inline;margin:0}
+  .body{padding:13px 14px 15px}
+  .mast-meta{text-align:left}
+  .strip{height:52px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap mast">
+    <div>
+      <h1>Radar Hibah Kedokteran Tropis</h1>
+      <p class="sub">Empat puluh tiga skema pendanaan yang dapat diakses Center for Tropical Medicine, FK-KMK UGM - internal UGM, nasional, regional, dan internasional, disaring menurut kelayakan institusi Indonesia.</p>
+    </div>
+    <div class="mast-meta">
+      <div id="asOf"></div>
+      <div>Katalog disusun 2 September 2026</div>
+      <button class="themetog" id="themeBtn" type="button">Ganti tema</button>
+    </div>
+  </div>
+</header>
+
+<div class="strip-shell">
+  <div class="wrap">
+    <div class="strip-head">
+      <span>Tenggat 12 bulan ke depan</span>
+      <span id="stripRange"></span>
+    </div>
+    <div class="strip" id="strip"></div>
+    <div class="strip-legend">
+      <span><i class="dot" style="background:var(--alert)"></i>Tutup dalam 30 hari</span>
+      <span><i class="dot" style="background:var(--signal)"></i>Terbuka, tenggat pasti</span>
+      <span><i class="dot" style="background:var(--calm)"></i>Perkiraan siklus berulang</span>
+    </div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <div class="wrap tabrow" role="tablist">
+    <button class="tab" role="tab" data-panel="radar" aria-selected="true">Radar</button>
+    <button class="tab" role="tab" data-panel="cari" aria-selected="false">Cari &amp; saring</button>
+    <button class="tab" role="tab" data-panel="siklus" aria-selected="false">Siklus tahunan</button>
+    <button class="tab" role="tab" data-panel="pipeline" aria-selected="false">Pipeline tim</button>
+    <button class="tab" role="tab" data-panel="kelayakan" aria-selected="false">Kelayakan &amp; pengecualian</button>
+    <button class="tab" role="tab" data-panel="update" aria-selected="false">Perbarui data</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ RADAR ============ -->
+<section class="panel" id="p-radar">
+  <div class="sec">
+    <h2>Sedang terbuka</h2>
+    <p class="lede">Panggilan dengan tenggat pasti yang belum lewat, diurutkan menurut tanggal tutup.</p>
+    <div class="list" id="listOpen"></div>
+  </div>
+  <div class="sec">
+    <h2>Segera dibuka kembali</h2>
+    <p class="lede">Skema berulang yang bulan siklusnya jatuh dalam empat bulan ke depan. Ini waktunya menyiapkan konsep dan mitra, bukan menunggu pengumuman.</p>
+    <div class="list" id="listSoon"></div>
+  </div>
+  <div class="sec">
+    <h2>Baru saja tutup</h2>
+    <p class="lede">Panggilan yang tenggatnya lewat dalam 120 hari terakhir. Berguna untuk memperkirakan kapan ronde berikutnya dibuka.</p>
+    <div class="list" id="listClosed"></div>
+  </div>
+</section>
+
+<!-- ============ CARI ============ -->
+<section class="panel" id="p-cari" hidden>
+  <h2>Cari &amp; saring</h2>
+  <p class="lede">Seluruh katalog, termasuk skema yang tidak lolos kelayakan. Cari berdasarkan nama skema, pemberi dana, atau kata kunci fokus riset.</p>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Cari skema, funder, atau fokus…" aria-label="Cari katalog">
+    <select id="fFokus" aria-label="Saring fokus riset"><option value="">Semua fokus</option></select>
+    <select id="fTipe" aria-label="Saring lingkup"><option value="">Semua lingkup</option></select>
+    <select id="fStatus" aria-label="Saring status"><option value="">Semua status</option></select>
+    <button class="chip" id="fFit" aria-pressed="false" type="button">Hanya kecocokan tinggi</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="list" id="listAll"></div>
+</section>
+
+<!-- ============ SIKLUS ============ -->
+<section class="panel" id="p-siklus" hidden>
+  <h2>Siklus tahunan</h2>
+  <p class="lede">Bulan pembukaan dan penutupan yang tercatat dari ronde sebelumnya. Ini bukan tenggat resmi - gunakan sebagai penanda kapan mulai memantau halaman funder, dan verifikasi begitu pengumuman terbit.</p>
+  <table>
+    <thead><tr><th>Bulan</th><th>Skema yang biasanya bergerak</th></tr></thead>
+    <tbody id="cycleBody"></tbody>
+  </table>
+</section>
+
+<!-- ============ PIPELINE ============ -->
+<section class="panel" id="p-pipeline" hidden>
+  <h2>Pipeline tim</h2>
+  <p class="lede">Pelacak proposal PKT. Data disimpan di peramban ini saja - tidak dikirim ke mana pun dan tidak otomatis terlihat oleh rekan tim. Gunakan Ekspor untuk membagikan snapshot.</p>
+
+  <div class="form-row">
+    <input type="text" id="pName" placeholder="Nama skema atau proposal" style="flex:2 1 240px">
+    <input type="text" id="pOwner" placeholder="Penanggung jawab" style="flex:1 1 150px">
+    <input type="date" id="pDue" aria-label="Tenggat">
+    <button class="btn" id="pAdd" type="button">Tambah ke pipeline</button>
+  </div>
+  <div class="form-row">
+    <button class="btn ghost" id="pExport" type="button">Ekspor JSON</button>
+    <button class="btn ghost" id="pImportBtn" type="button">Impor JSON</button>
+    <input type="file" id="pImport" accept="application/json" hidden>
+  </div>
+
+  <div class="pipe-grid" id="pipeGrid"></div>
+</section>
+
+<!-- ============ KELAYAKAN ============ -->
+<section class="panel" id="p-kelayakan" hidden>
+  <h2>Kelayakan &amp; pengecualian</h2>
+  <div class="prose">
+    <p>Bagian ini mencatat aturan kelayakan yang paling sering menjegal proposal dari institusi Indonesia. Bacalah sebelum menghabiskan waktu menyusun konsep.</p>
+
+    <h3>Klasifikasi pendapatan Indonesia</h3>
+    <p>Banyak skema membatasi diri pada <em>low-income</em> dan <em>lower-middle-income countries</em>, bukan LMIC secara umum. Klasifikasi Bank Dunia untuk Indonesia pernah berpindah antara <em>lower-middle</em> dan <em>upper-middle income</em>, dan sejumlah situs agregator mencantumkan kelayakan Indonesia secara keliru karena itu. Baca kata-kata persis pita pendapatan di setiap panggilan. Skema yang menulis “low- or middle-income country” tanpa kualifikasi umumnya mencakup Indonesia; yang menulis “low- and lower-middle-income” umumnya tidak.</p>
+    <p>Contoh konkretnya ada di katalog ini. Alan J. Magill Fellowship dari ASTMH terbuka untuk warga dan penduduk negara berpendapatan rendah atau menengah-bawah - dengan klasifikasi menengah-atas, peneliti Indonesia kemungkinan besar berada di luar cakupan. Sebaliknya, panggilan uji klinis Wellcome menulis “low- or middle-income country in Africa, South Asia or South-East Asia”, yang mencakup Indonesia.</p>
+
+    <h3>Wilayah WHO: Indonesia ada di SEARO, bukan WPRO</h3>
+    <p>Panggilan TDR diterbitkan per kantor regional. Indonesia termasuk WHO South-East Asia Region (SEARO). Beberapa ringkasan pihak ketiga mencantumkan Indonesia pada panggilan Western Pacific (WPRO) - perlakukan itu sebagai kekeliruan sampai terkonfirmasi di halaman resmi TDR, dan pantau panggilan SEARO/TDR sebagai jalur utama.</p>
+
+    <h3>Perubahan kebijakan Wellcome per 29 Oktober 2026</h3>
+    <p>Wellcome dilaporkan akan membatasi <em>lead applicant</em> pada institusi di Inggris dan di LMIC kawasan Afrika, Asia Selatan, dan Asia Tenggara. Indonesia berada di Asia Tenggara, sehingga secara geografis kemungkinan tetap layak - tetapi status ini berasal dari ringkasan pihak ketiga dan <strong>belum diverifikasi pada halaman resmi Wellcome</strong>. Konfirmasikan sebelum menjadikannya dasar strategi.</p>
+
+    <h3>Skema yang menutup pintu untuk Indonesia</h3>
+    <ul>
+      <li><strong>NIHR Global Health Research</strong> - sejak 2026 fokus pendanaan dipersempit ke Afrika sub-Sahara dan Asia Selatan. Panggilan keamanan kesehatan yang diluncurkan April 2026 mengangkat resistensi antimikroba dengan dana hingga £5 juta, tetapi tetap terbatas pada kedua kawasan itu.</li>
+      <li><strong>RISE for Nutrition, Eleanor Crook Foundation</strong> - portofolio risetnya terpusat di Afrika Timur dan sebagian besar hibah bersifat undangan. Tidak ada jalur kompetitif terbuka untuk Indonesia pada saat pemeriksaan.</li>
+      <li><strong>Global Health EDCTP3</strong> - sasaran programnya adalah Afrika sub-Sahara. Institusi Indonesia hanya masuk sebagai mitra dalam kasus tertentu, bukan sebagai pemimpin konsorsium.</li>
+      <li><strong>Grand Challenges bertema kawasan</strong> - beberapa ronde Gates mensyaratkan implementasi di Afrika sub-Sahara meski pelamarnya boleh dari mana saja. Periksa klausul lokasi implementasi, bukan hanya klausul pelamar.</li>
+    </ul>
+
+    <h3>Skema yang menuntut mitra negara tertentu</h3>
+    <ul>
+      <li><strong>GHIT Fund</strong> - setiap proposal wajib memuat sekurangnya satu organisasi Jepang dan satu non-Jepang. Peran mitra lokal LMIC didorong secara eksplisit, sehingga PKT paling realistis masuk sebagai mitra implementasi, bukan pengusul utama.</li>
+      <li><strong>RIGHT Fund</strong> - tim wajib menyertakan sekurangnya satu mitra Korea.</li>
+      <li><strong>Toyota Foundation International Grant</strong> - <em>project representative</em> harus punya alamat kontak di Jepang, dan proyek dijalankan di minimal dua negara sasaran.</li>
+    </ul>
+
+    <h3>Skema yang menuntut struktur konsorsium tertentu</h3>
+    <ul>
+      <li><strong>Horizon Europe Cluster 1</strong> - konsorsium wajib memuat sekurangnya tiga entitas independen dari negara anggota atau negara terasosiasi yang berbeda. Partisipasi negara ketiga terbuka, tetapi PKT masuk sebagai mitra dalam konsorsium yang dipimpin Eropa. Membangun konsorsium semacam ini butuh setengah tahun atau lebih, jadi tenggat yang tinggal beberapa minggu bukan target yang realistis.</li>
+      <li><strong>Panggilan transnasional One Health AMR</strong> - pendanaan disalurkan badan pendana nasional di negara peserta, yang seluruhnya di Eropa dan beberapa mitra. Tim Indonesia hanya dapat masuk sebagai kolaborator tanpa pendanaan langsung.</li>
+      <li><strong>ESCMID</strong> - hibah study group mensyaratkan proyek dijalankan bersama sekurangnya dua institusi di dua negara berbeda, dan pelamar harus anggota society sebelum melamar. Keanggotaan LMIC membuka jalur bagi peneliti Indonesia yang masih dalam masa pelatihan.</li>
+    </ul>
+
+    <h3>Batasan skema nasional</h3>
+    <p>RIIM Kompetisi BRIN-LPDP mengecualikan sejumlah jenis riset yang justru menjadi tulang punggung PKT: uji klinis, uji validasi dan uji mutu, riset survei, riset aksi, serta riset kebijakan. Skema ini lebih cocok untuk komponen <em>novelty</em> - misalnya pengembangan metode diagnostik, entomologi, atau pemodelan - daripada untuk studi implementasi lapangan.</p>
+
+    <h3>Posisi PTN-BH</h3>
+    <p>PKT beroperasi di bawah kerangka PTN-BH UGM. Ini memengaruhi cara dokumen legal, klausul kontrak, dan jawaban <em>due diligence</em> disusun, karena banyak funder menulis persyaratannya dengan asumsi pelamar berbentuk NGO atau entitas swasta. Siapkan pemetaan dokumen legal lebih awal untuk skema internasional; ini kerap menjadi penghambat di menit terakhir, bukan isi proposalnya.</p>
+  </div>
+</section>
+
+<!-- ============ UPDATE ============ -->
+<section class="panel" id="p-update" hidden>
+  <h2>Perbarui data</h2>
+  <div class="prose">
+    <p>Halaman ini statis. Tidak ada server, tidak ada basis data, dan tidak ada proses yang berjalan sendiri di latar belakang. Status “terbuka” atau “tutup” dihitung ulang setiap kali halaman dibuka, dengan membandingkan tanggal di katalog terhadap tanggal hari ini di peramban Anda.</p>
+    <p>Yang <em>tidak</em> dilakukan halaman ini: menarik panggilan baru dari situs funder. Sebagian besar situs funder tidak menyediakan API terbuka, dan yang menyediakannya pun umumnya memblokir permintaan langsung dari peramban. Maka penambahan skema baru dilakukan lewat riset ulang, lalu menyunting berkas katalog.</p>
+
+    <h3>Menyunting katalog</h3>
+    <p>Seluruh data ada di dalam berkas <code>index.html</code> ini, di dalam blok <code>const KATALOG = [...]</code>. Setiap entri adalah satu objek. Untuk menambah skema, salin satu objek yang ada, ubah isinya, lalu commit ke repositori - GitHub Pages akan memuat versi baru dalam satu-dua menit.</p>
+    <p>Isi <code>verifikasi</code> dengan jujur: <code>resmi</code> jika tanggalnya Anda baca sendiri di halaman funder, <code>sekunder</code> jika berasal dari agregator atau berita, <code>belum</code> jika masih dugaan. Badge di kartu akan mengikuti nilai ini, sehingga siapa pun yang membaca tahu seberapa jauh angka itu bisa dipercaya.</p>
+
+    <h3>Riset ulang berkala</h3>
+    <p>Setiap kuartal, atau ketika ada skema yang statusnya berubah, minta Claude meneliti ulang dan mengembalikan katalog yang sudah diperbarui. Tombol di bawah menyalin instruksi yang sudah berisi konteks PKT.</p>
+    <p><button class="btn" id="copyPrompt" type="button">Salin prompt riset ulang</button></p>
+
+    <h3>Memeriksa entri kedaluwarsa</h3>
+    <p id="staleReport"></p>
+
+    <h3>Menaruh di GitHub Anda</h3>
+    <ul>
+      <li>Buat repositori baru, misalnya <code>radar-hibah-kedokteran-tropis</code>.</li>
+      <li>Unggah berkas ini dengan nama <code>index.html</code> di akar repositori.</li>
+      <li>Buka <em>Settings → Pages</em>, pilih sumber <em>Deploy from a branch</em>, cabang <code>main</code>, folder <code>/ (root)</code>.</li>
+      <li>Halaman akan terbit di <code>https://&lt;akun&gt;.github.io/radar-hibah-kedokteran-tropis/</code> dalam beberapa menit.</li>
+    </ul>
+    <p>Repositori publik berarti katalognya terbaca siapa saja. Isi pipeline tidak ikut terbit - data itu hanya ada di peramban masing-masing orang.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================================
+   KATALOG
+   Setiap entri:
+   nama, pemberi, tipe, fokus[], nilai, durasi,
+   tenggat: "YYYY-MM-DD" atau null
+   siklus: [bulan 1-12] perkiraan bulan pembukaan/penutupan historis
+   fit: 1 rendah | 2 sedang | 3 tinggi (kecocokan dengan portofolio PKT)
+   verifikasi: "resmi" | "sekunder" | "belum"
+   catatan: deskripsi singkat
+   peringatan: klausul kelayakan yang berisiko (opsional)
+   url: tautan resmi
+   ========================================================================= */
+const KATALOG = [
+
+/* ============================================================
+   INTERNASIONAL - PENYAKIT MENULAR & KEDOKTERAN TROPIS
+   ============================================================ */
+{
+  id:"wellcome-discovery",
+  nama:"Wellcome Discovery Awards",
+  pemberi:"Wellcome Trust",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Riset dasar & terapan","Iklim & kesehatan"],
+  nilai:"Tidak dipatok; skala program besar",
+  durasi:"Hingga 8 tahun",
+  tenggat:"2026-09-22",
+  siklus:[3,9],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Skema unggulan Wellcome untuk tim mapan yang mengajukan program riset ambisius, bukan proyek tunggal. Dua ronde per tahun, biasanya Maret dan September.",
+  peringatan:"Tanggal 22 September 2026 berasal dari ringkasan halaman tenggat Wellcome. Halaman yang berhasil diambil ulang menampilkan versi cache yang lebih lama, jadi konfirmasikan langsung sebelum menyusun jadwal internal.",
+  url:"https://wellcome.org/research-funding/guidance/prepare-to-apply/scheme-application-deadlines"
+},
+{
+  id:"wellcome-cda",
+  nama:"Wellcome Career Development Awards",
+  pemberi:"Wellcome Trust",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Karier peneliti","Iklim & kesehatan"],
+  nilai:"Tidak dipatok; mencakup gaji dan biaya riset",
+  durasi:"Hingga 8 tahun",
+  tenggat:null,
+  siklus:[3,7,11],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Untuk peneliti tahap menengah yang sedang membangun kelompok riset mandiri. Tercatat tiga ronde per tahun; ronde 2026 jatuh pada 26 Maret dan 28 Juli.",
+  peringatan:"",
+  url:"https://wellcome.org/research-funding/guidance/prepare-to-apply/scheme-application-deadlines"
+},
+{
+  id:"wellcome-eca",
+  nama:"Wellcome Early-Career Awards",
+  pemberi:"Wellcome Trust",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Karier peneliti","Riset dasar & terapan"],
+  nilai:"Tidak dipatok; mencakup gaji dan biaya riset",
+  durasi:"Hingga 5 tahun",
+  tenggat:null,
+  siklus:[2,5,7,9],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Untuk peneliti awal yang hendak memimpin proyek pertamanya. Beberapa ronde per tahun; ronde 2026 tercatat pada 17 Februari dan 21 Juli.",
+  peringatan:"",
+  url:"https://wellcome.org/research-funding/guidance/prepare-to-apply/scheme-application-deadlines"
+},
+{
+  id:"wellcome-idcta",
+  nama:"Infectious Disease Clinical Trial Award",
+  pemberi:"Wellcome Trust dengan NIHR",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Uji klinis & terapeutik","Riset implementasi & kebijakan"],
+  nilai:"£1 juta - £8 juta per hibah",
+  durasi:"3-5 tahun",
+  tenggat:null,
+  siklus:[6],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Uji acak terkendali untuk mengoptimalkan intervensi farmasi berlisensi, dipimpin dari Afrika, Asia Selatan, atau Asia Tenggara. Ronde 2026 ditutup 2 Juni 2026 dengan target 8-12 hibah.",
+  peringatan:"Institusi pengelola harus berada di LMIC Afrika, Asia Selatan, atau Asia Tenggara, dan sekurangnya separuh pelamar berbasis di kawasan itu. Indonesia memenuhi syarat geografis. Tercatat sebagai panggilan sekali jalan, jadi ronde lanjutan belum pasti.",
+  url:"https://wellcome.org/research-funding/schemes/infectious-disease-clinical-trial-award-optimising-interventions-impact"
+},
+{
+  id:"wellcome-idctda",
+  nama:"Infectious Disease Clinical Trial Development Award",
+  pemberi:"Wellcome Trust dengan NIHR",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Uji klinis & terapeutik","Konsorsium & kemitraan"],
+  nilai:"Hingga £200.000 per hibah",
+  durasi:"Hingga 24 bulan",
+  tenggat:null,
+  siklus:[5],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Dana persiapan untuk membentuk tim, menyusun protokol, dan mengumpulkan bukti pendahuluan menuju uji klinis besar. Berfungsi sebagai pengumpan bagi Clinical Trial Award. Ronde 2026 ditutup 19 Mei 2026.",
+  peringatan:"",
+  url:"https://wellcome.org/research-funding/schemes/infectious-disease-clinical-trial-development-award"
+},
+{
+  id:"wellcome-hubs",
+  nama:"Infrastructure Hubs for Evidence Synthesis in LMICs",
+  pemberi:"Wellcome Trust",
+  tipe:"Internasional",
+  fokus:["Riset implementasi & kebijakan","Penguatan kapasitas"],
+  nilai:"£1,5 juta - £1,9 juta per hub",
+  durasi:"3-5 tahun",
+  tenggat:null,
+  siklus:[5],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Hub sintesis bukti berbasis metode terbantu AI, wajib selaras dengan sekurangnya satu prioritas Wellcome dan satu sektor kebijakan seperti sistem pangan, pertumbuhan ekonomi, atau perlindungan sosial. Pelamar utama harus berada di institusi LMIC. Ronde ditutup 7 Mei 2026.",
+  peringatan:"Panggilan sekali jalan; belum ada indikasi ronde lanjutan. Dicatat sebagai preseden bahwa Wellcome mendanai infrastruktur, bukan hanya proyek riset.",
+  url:"https://wellcome.org/research-funding/guidance/prepare-to-apply/scheme-application-deadlines"
+},
+{
+  id:"wellcome-climate",
+  nama:"Climate and Health Awards",
+  pemberi:"Wellcome Trust",
+  tipe:"Internasional",
+  fokus:["Iklim & kesehatan","Penyakit menular"],
+  nilai:"Bervariasi per panggilan",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[2,4,6],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Program iklim dan kesehatan Wellcome menerbitkan panggilan bertema secara berkala, termasuk panas ekstrem, penyakit menular yang sensitif terhadap iklim, serta mitigasi dengan manfaat samping kesehatan di LMIC. Sangat sejalan dengan pekerjaan dengue, malaria, dan pemodelan di PKT.",
+  peringatan:"Panggilan bertema berganti-ganti dan tidak berpola tetap. Pantau pencari peluang Wellcome, bukan mengandalkan siklus historis di sini.",
+  url:"https://wellcome.org/research-funding/guidance/prepare-to-apply/scheme-application-deadlines"
+},
+{
+  id:"fogarty-k43",
+  nama:"Emerging Global Leader Award (K43)",
+  pemberi:"Fogarty International Center, NIH",
+  tipe:"Internasional",
+  fokus:["Penguatan kapasitas","Karier peneliti","Penyakit menular"],
+  nilai:"Hibah karier mentoring, skala K-award NIH",
+  durasi:"3-5 tahun",
+  tenggat:"2026-12-03",
+  siklus:[12],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Dukungan karier untuk peneliti awal-menengah yang berbasis di institusi LMIC, dengan mentor di institusi asal dan mitra AS. Jalur paling langsung bagi staf PKT yang sedang membangun rekam jejak sebagai PI mandiri.",
+  peringatan:"Sejak 25 Mei 2026, NIH mewajibkan penyelesaian pelatihan keamanan riset untuk seluruh aplikasi. Pastikan calon pelamar sudah menuntaskannya sebelum tanggal pengajuan.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"fogarty-d43-gid",
+  nama:"Global Infectious Diseases Research Training (D43)",
+  pemberi:"Fogarty International Center, NIH",
+  tipe:"Internasional",
+  fokus:["Penguatan kapasitas","Penyakit menular"],
+  nilai:"Program pelatihan institusional",
+  durasi:"5 tahun",
+  tenggat:null,
+  siklus:[8],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Hibah pelatihan institusional untuk membangun kapasitas riset penyakit menular di LMIC. Ronde 2026 ditutup 6 Agustus 2026; secara historis tenggatnya jatuh di Agustus.",
+  peringatan:"",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"fogarty-launch",
+  nama:"LAUNCHing Leaders in Global Health Research (D43)",
+  pemberi:"Fogarty International Center, NIH",
+  tipe:"Internasional",
+  fokus:["Penguatan kapasitas","Kesehatan masyarakat"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[5],
+  fit:1,
+  verifikasi:"belum",
+  catatan:"Program pelatihan pemimpin riset kesehatan global dengan kode RFA-TW-25-002; tenggat perkiraan 25 Mei 2026.",
+  peringatan:"Belum diverifikasi apakah institusi LMIC dapat menjadi pengusul utama atau hanya mitra. Skema D43 LAUNCH umumnya dipimpin institusi AS. Periksa sebelum mengalokasikan waktu.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"nih-di-research",
+  nama:"Dissemination and Implementation Research in Health (R03/R21)",
+  pemberi:"NIH, dengan Fogarty sebagai mitra",
+  tipe:"Internasional",
+  fokus:["Riset implementasi & kebijakan","Sistem & keamanan kesehatan","Kesehatan masyarakat"],
+  nilai:"Skala R03 dan R21 NIH",
+  durasi:"2-3 tahun",
+  tenggat:null,
+  siklus:[2,6,10],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Kode PAR-25-233 (R03, tanpa uji klinis) dan PAR-25-143 (R21, uji klinis opsional), dengan beberapa tanggal penerimaan per tahun. Cocok untuk komponen riset implementasi PKT.",
+  peringatan:"Kelayakan organisasi asing bervariasi antar PAR NIH. Baca bagian eligible applicants pada pengumuman spesifiknya sebelum menyusun proposal.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"sea-dream",
+  nama:"DREAM 4 Health",
+  pemberi:"SEA DREAM - SEAMEO Secretariat, Wellcome Trust, FCDO",
+  tipe:"Regional",
+  fokus:["Kesehatan masyarakat","Penyakit menular","Konsorsium & kemitraan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[1,2],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Konsorsium riset lintas negara yang dipimpin Asia Tenggara untuk tantangan kesehatan regional. Ronde 2026 sudah tertutup dengan tinjauan pakar berlangsung Agustus-September 2026. Ini skema dengan kecocokan geografis dan tematik tertinggi untuk PKT, dan tim sudah familiar dengan template RAB SEA DREAMS.",
+  peringatan:"Nilai hibah dan durasi belum diverifikasi di halaman resmi. Periksa saat panggilan berikutnya terbit.",
+  url:"https://sea-dream.org/research-funding/dream-4-health-call-proposals-2026"
+},
+{
+  id:"tdr-searo",
+  nama:"Joint SEARO/TDR Impact Grants",
+  pemberi:"WHO SEARO dan TDR",
+  tipe:"Regional",
+  fokus:["Riset implementasi & kebijakan","Penyakit menular","Malaria, TB & NTD"],
+  nilai:"Skala kecil; ronde regional lain hingga US$ 15.000 per hibah",
+  durasi:"Hingga 12 bulan",
+  tenggat:null,
+  siklus:[9,10],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Hibah riset implementasi untuk prioritas unggulan kawasan Asia Tenggara - akhiri TB, eliminasi NTD, malaria, HIV, dan sifilis. Indonesia termasuk negara yang layak. Nilainya kecil tetapi jalur ini bagus untuk membangun rekam jejak dengan WHO dan menghasilkan bukti yang langsung terpakai program nasional.",
+  peringatan:"Ronde SEARO tidak terbit setiap tahun dengan jadwal tetap. Ronde AFRO 2026-27 ditutup 15 September 2026, yang menandakan siklus TDR sedang aktif - pantau halaman SEARO pada kuartal yang sama.",
+  url:"https://www.who.int/india/news-room/articles-detail/call-for-proposals-joint-searo-tdr-impact-grants-for-implementation-research-for-accelerating-elimination-of-diseases-of-poverty"
+},
+{
+  id:"horizon-cl1",
+  nama:"Horizon Europe Cluster 1 - Health",
+  pemberi:"Komisi Eropa, HaDEA",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Sistem & keamanan kesehatan","Iklim & kesehatan"],
+  nilai:"Bervariasi per topik; umumnya beberapa juta euro per proyek",
+  durasi:"3-5 tahun",
+  tenggat:"2026-09-15",
+  siklus:[2,4,9],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Program kerja 2026-2027 membuka enam destinasi tematik, termasuk penanggulangan penyakit dan lingkungan yang menyehatkan. Partisipasi Cluster Health terbuka untuk negara ketiga, dan proyek dengan mitra internasional didorong mengatasi tantangan kesehatan global. Panggilan tahap tunggal 2026 tutup 16 April dan 15 September 2026; ronde berikutnya 13 April 2027.",
+  peringatan:"Konsorsium wajib memuat sekurangnya tiga entitas independen dari negara anggota atau negara terasosiasi yang berbeda. PKT masuk sebagai mitra dalam konsorsium yang dipimpin Eropa, bukan sebagai koordinator. Membangun konsorsium butuh enam bulan atau lebih - tenggat 15 September 2026 tidak realistis untuk dimulai sekarang.",
+  url:"https://hadea.ec.europa.eu/calls-proposals/horizon-europe-health-2026-calls-destination-ensuring-equal-access-innovative-sustainable-and-high_en"
+},
+{
+  id:"toyota-intl",
+  nama:"International Grant Program",
+  pemberi:"The Toyota Foundation",
+  tipe:"Internasional",
+  fokus:["Kesehatan masyarakat","Keterlibatan komunitas"],
+  nilai:"Maks ¥5 juta (1 tahun) atau ¥10 juta (2 tahun)",
+  durasi:"1-2 tahun, mulai November",
+  tenggat:null,
+  siklus:[4,5],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Proyek lintas negara di Asia Timur, Tenggara, dan Selatan yang mengangkat isu sosial bersama. Ronde 2026 dibuka 1 April dan ditutup 30 Mei 2026, dengan total dana ¥80 juta.",
+  peringatan:"Perwakilan proyek harus memiliki alamat kontak di Jepang, dan proyek dijalankan di sekurangnya dua negara sasaran. Panitia menolak proposal yang berpola satu negara membantu negara lain - rancang sebagai aliansi setara. Konsultasi pra-pengajuan tersedia hingga sekitar sepekan sebelum tenggat dan sangat dianjurkan.",
+  url:"https://www.toyotafound.or.jp/english/grant/international/"
+},
+{
+  id:"ghit-trp",
+  nama:"Target Research, Product Development, dan Screening Platform",
+  pemberi:"GHIT Fund",
+  tipe:"Internasional",
+  fokus:["Malaria, TB & NTD","Diagnostik & vaksin","Sistem & keamanan kesehatan"],
+  nilai:"Bervariasi per platform",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[1,6,10],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Pendanaan R&D untuk malaria, TB, NTD, dan patogen berpotensi pandemi. RFP terbit berkala; ronde tercatat mencakup Screening Platform (Januari 2026), pengumuman platform R&D baru (Juni 2026), serta jalur Pandemic Preparedness and Response yang dapat dipercepat saat ada darurat kesehatan.",
+  peringatan:"Setiap proposal wajib memuat sekurangnya satu organisasi Jepang dan satu non-Jepang, dengan fokus utama mendukung inovasi Jepang. Mitra LMIC dengan peran ilmiah atau implementasi nyata sangat dianjurkan - posisi paling realistis bagi PKT adalah sebagai mitra, bukan pengusul utama.",
+  url:"https://www.ghitfund.org/newsroom/news/en"
+},
+{
+  id:"right-fund",
+  nama:"Product Development Award dan skema lain",
+  pemberi:"RIGHT Foundation, Korea",
+  tipe:"Internasional",
+  fokus:["Diagnostik & vaksin","Uji klinis & terapeutik","Sistem & keamanan kesehatan"],
+  nilai:"Hingga KRW 500 juta pada ronde PDA bertarget",
+  durasi:"Bervariasi; ronde bertarget hingga 9 bulan",
+  tenggat:null,
+  siklus:[],
+  fit:1,
+  verifikasi:"resmi",
+  catatan:"Kemitraan Kementerian Kesehatan Korea, industri hayati Korea, dan Gates Foundation untuk teknologi penyakit terabaikan. RFP terbit berkala; ronde yang sedang berjalan berfokus pada diagnostik Ebola termasuk virus Bundibugyo.",
+  peringatan:"Tim wajib menyertakan sekurangnya satu mitra Korea. Kecocokan rendah kecuali PKT masuk sebagai lokasi validasi lapangan dalam konsorsium yang dipimpin Korea.",
+  url:"https://rightfoundation.kr/en/funding-opportunities/"
+},
+{
+  id:"gates-gc",
+  nama:"Grand Challenges - panggilan bergulir",
+  pemberi:"Gates Foundation",
+  tipe:"Internasional",
+  fokus:["Diagnostik & vaksin","Malaria, TB & NTD","Gizi & kesehatan ibu-anak"],
+  nilai:"Umumnya hingga US$ 500.000 per proyek",
+  durasi:"Umumnya hingga 12 bulan untuk ronde bertarget",
+  tenggat:null,
+  siklus:[3,4,7,8],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Gates umumnya tidak menerima proposal tanpa undangan; Grand Challenges dan portal RFP adalah pengecualian utamanya. Ronde bertema muncul beberapa kali setahun, termasuk alat diagnostik berbiaya sangat rendah untuk TB, HIV, malaria, NTD, dan surveilans gizi.",
+  peringatan:"Beberapa ronde membolehkan pelamar dari mana saja tetapi mensyaratkan implementasi di Afrika sub-Sahara. Periksa klausul lokasi implementasi secara terpisah dari klausul kelayakan pelamar. Jangan mengandalkan tenggat dari artikel lama - pastikan panggilannya masih terbuka pada hari Anda mulai dan sekali lagi sebelum mengirim.",
+  url:"https://gcgh.grandchallenges.org/"
+},
+{
+  id:"gcc",
+  nama:"Bold Ideas with Big Impact",
+  pemberi:"Grand Challenges Canada",
+  tipe:"Internasional",
+  fokus:["Diagnostik & vaksin","Gizi & kesehatan ibu-anak","Kesehatan masyarakat"],
+  nilai:"CAD 300.000 - 1,5 juta pada ronde Transition to Scale",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Pendanaan inovasi kesehatan untuk populasi rentan di LMIC, dengan tahap Proof of Concept dan Transition to Scale. Indonesia termasuk 12 negara prioritas pada inisiatif Being. Tidak menerima proposal tanpa panggilan terbuka.",
+  peringatan:"Pada pemeriksaan terakhir, halaman resmi menyatakan tidak ada panggilan yang sedang terbuka. Skema ini bergerak per inisiatif bertema, jadi pantau halaman Apply for Funding daripada menunggu siklus.",
+  url:"https://www.grandchallenges.ca/apply-for-funding/"
+},
+{
+  id:"escmid-individual",
+  nama:"Individual Research Grant",
+  pemberi:"ESCMID",
+  tipe:"Internasional",
+  fokus:["Resistensi antimikroba","Penyakit menular","Riset dasar & terapan"],
+  nilai:"Belum diverifikasi",
+  durasi:"12 bulan, dapat diperpanjang hingga 24 bulan",
+  tenggat:null,
+  siklus:[9],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Hibah untuk peneliti tahap awal di mikrobiologi klinis dan penyakit menular, bergantian setiap tahun antara infeksi bakteri dan infeksi jamur, virus, atau parasit. Keanggotaan ESCMID LMIC membuka kelayakan bagi peneliti Indonesia yang masih dalam masa pelatihan atau baru menyelesaikannya.",
+  peringatan:"Sumber pihak ketiga menyebut tenggat 10 September 2026, sementara halaman resmi ESCMID menyatakan panggilan sudah tertutup. Kedua informasi bertentangan - verifikasi ke ESCMID sebelum menyiapkan apa pun.",
+  url:"https://www.escmid.org/science-research/grants-awards/research-grants/individual-research-grant/"
+},
+{
+  id:"escmid-sg",
+  nama:"Study Group Research Grant",
+  pemberi:"ESCMID",
+  tipe:"Internasional",
+  fokus:["Resistensi antimikroba","Penyakit menular","Konsorsium & kemitraan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Maksimal 2 tahun",
+  tenggat:null,
+  siklus:[7],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Hibah kolaboratif yang menekankan resistensi antimikroba dan penyakit menular yang muncul, dengan syarat proyek dijalankan bersama sekurangnya dua institusi di dua negara berbeda. Pelamar harus anggota ESCMID dan anggota study group yang terlibat.",
+  peringatan:"Tenggat 19 Juli yang tercatat berasal dari agregator, bukan halaman ESCMID. Verifikasi sebelum merencanakan.",
+  url:"https://www.escmid.org/science-research/grants-awards/research-grants/individual-research-grant/"
+},
+{
+  id:"astmh-magill",
+  nama:"Alan J. Magill Fellowship dan penghargaan ASTMH lain",
+  pemberi:"American Society of Tropical Medicine and Hygiene",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Karier peneliti"],
+  nilai:"Skala fellowship dan travel award",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[3],
+  fit:1,
+  verifikasi:"resmi",
+  catatan:"Fellowship dan travel award untuk anggota ASTMH. Aplikasi daring untuk ronde berikutnya tercatat dibuka sekitar awal Maret.",
+  peringatan:"Alan J. Magill Fellowship terbuka untuk anggota ASTMH yang merupakan warga dan penduduk sah negara berpendapatan rendah atau menengah-bawah. Indonesia diklasifikasikan menengah-atas oleh Bank Dunia, sehingga kemungkinan besar tidak layak. Periksa kata-kata persisnya sebelum mendorong staf melamar.",
+  url:"https://www.astmh.org/awards-fellowships-medals/astmh-sponsored-fellowships"
+},
+{
+  id:"repurposing",
+  nama:"Generic Drug Repurposing",
+  pemberi:"Coefficient Giving dengan Cures Within Reach",
+  tipe:"Internasional",
+  fokus:["Uji klinis & terapeutik","Kesehatan masyarakat"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[5],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Hibah untuk uji klinis penggunaan ulang obat generik yang ditujukan bagi pasien di LMIC. Pelamar boleh berbasis di mana saja. Ronde 2026 ditutup 18 Mei 2026.",
+  peringatan:"Nilai hibah dan jadwal ronde berikutnya belum diverifikasi. Informasi berasal dari buletin pendanaan Fogarty, bukan halaman penyelenggara.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"par-antibiotics",
+  nama:"Beyond Antibiotics - Preventive Strategies",
+  pemberi:"PAR Foundation",
+  tipe:"Internasional",
+  fokus:["Resistensi antimikroba","One Health & zoonosis"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[4],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Hibah riset untuk strategi yang menurunkan kebutuhan penggunaan antibiotik, terbuka bagi pelamar dari seluruh dunia dan dari berbagai disiplin. Ronde 2026 ditutup 30 April 2026.",
+  peringatan:"Detail nilai, durasi, dan jadwal ronde berikutnya belum diverifikasi ke halaman penyelenggara.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"jpiamr",
+  nama:"Joint Transnational Call - One Health AMR",
+  pemberi:"European Partnership One Health AMR, penerus JPIAMR",
+  tipe:"Internasional",
+  fokus:["Resistensi antimikroba","One Health & zoonosis"],
+  nilai:"Total lebih dari €31 juta per panggilan",
+  durasi:"3 tahun",
+  tenggat:null,
+  siklus:[11,2],
+  fit:1,
+  verifikasi:"resmi",
+  catatan:"Panggilan transnasional tahunan bertema AMR. Ronde 2026 mengangkat pengobatan dan kepatuhan protokol terapi, dibuka 18 November 2025 dan menutup praproposal 2 Februari 2026.",
+  peringatan:"Pendanaan disalurkan oleh badan pendana nasional di negara peserta, yang seluruhnya berada di Eropa dan beberapa negara mitra. Indonesia bukan negara peserta, sehingga tim Indonesia hanya dapat masuk sebagai kolaborator tanpa pendanaan langsung.",
+  url:"https://ohamr.eu/calls/call-2026-new-treatments-to-tackle-amr/"
+},
+{
+  id:"aciar-airpoh",
+  nama:"One Health Research Program (AIRPOH) dan skema ACIAR lain",
+  pemberi:"ACIAR Australia dengan IDRC Kanada",
+  tipe:"Internasional",
+  fokus:["One Health & zoonosis"],
+  nilai:"Ronde AIRPOH: hingga AUD 1 juta per proyek",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"belum",
+  catatan:"Program One Health lintas manusia, hewan, dan lingkungan untuk enam negara Asia Timur dan Tenggara - Timor-Leste, Indonesia, Kamboja, Vietnam, Laos, dan Filipina - dengan universitas dan lembaga riset nasional diutamakan di atas kementerian. Ini kecocokan tematik terkuat untuk portofolio zoonosis dan ivermektin pada ternak.",
+  peringatan:"Informasi yang tersedia berasal dari ronde AIRPOH terdahulu, bukan panggilan yang sedang berjalan. Status pendanaan ACIAR-IDRC saat ini belum diverifikasi - perlu diriset sebelum dijadikan target.",
+  url:"https://www.aciar.gov.au/"
+},
+{
+  id:"unicef-idn",
+  nama:"Expression of Interest - program gizi dan kesehatan",
+  pemberi:"UNICEF Indonesia",
+  tipe:"Nasional",
+  fokus:["Gizi & kesehatan ibu-anak","Sistem & keamanan kesehatan"],
+  nilai:"Bervariasi per EOI",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"UNICEF Indonesia menerbitkan EOI untuk mitra pelaksana, termasuk penguatan layanan gizi ibu dan anak terpadu di Nusa Tenggara Timur dengan pendekatan berbasis komunitas dan tahan iklim. Ronde yang tercatat ditutup 31 Mei 2026. Jaringan lapangan PKT di NTT membuat jalur ini bernilai tinggi.",
+  peringatan:"Ini pengadaan mitra pelaksana, bukan hibah riset kompetitif - persyaratan administrasi dan pelaporannya mengikuti aturan PBB. Informasi berasal dari agregator; pantau portal pengadaan UNICEF Indonesia secara langsung.",
+  url:"https://www2.fundsforngos.org/environment-2/call-for-eois-integrated-child-and-maternal-nutrition-services-in-ntt-province-indonesia/"
+},
+{
+  id:"cepf-wallacea",
+  nama:"Small dan Large Grants - Wallacea",
+  pemberi:"Critical Ecosystem Partnership Fund",
+  tipe:"Nasional",
+  fokus:["One Health & zoonosis","Keterlibatan komunitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[2,3],
+  fit:1,
+  verifikasi:"sekunder",
+  catatan:"Panggilan serentak untuk letter of inquiry hibah kecil dan besar di bentang Wallacea, yang mencakup NTT. Ronde tercatat dibuka 16 Februari dan menutup 15 Maret 2026.",
+  peringatan:"Fokus utamanya konservasi, bukan kesehatan. Relevan hanya untuk komponen One Health yang bersinggungan dengan tata kelola lanskap dan satwa liar. Jangan diperlakukan sebagai jalur pendanaan riset kesehatan.",
+  url:"https://www.developmentaid.org/grants/view/1609992/wallacea-call-for-proposals-for-small-and-large-grants"
+},
+
+/* ============================================================
+   NASIONAL DAN INTERNAL
+   ============================================================ */
+{
+  id:"damas-fkkmk",
+  nama:"Hibah Dana Masyarakat (Damas) Penelitian",
+  pemberi:"FK-KMK Universitas Gadjah Mada",
+  tipe:"Internal UGM",
+  fokus:["Kesehatan masyarakat","Riset dasar & terapan","Penyakit menular"],
+  nilai:"Belum diverifikasi",
+  durasi:"Satu tahun anggaran",
+  tenggat:null,
+  siklus:[1,2],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Hibah internal fakultas untuk dosen dan peneliti di lingkungan FK-KMK, diajukan melalui Simaster UGM. Sosialisasi ronde 2026 digelar 6 Februari 2026. Mulai 2026 tidak ada tahap presentasi tatap muka - ketua peneliti mengunggah rekaman presentasi maksimal sepuluh menit bersama proposal.",
+  peringatan:"Nilai hibah dan kuota belum diverifikasi. Pantau laman Informasi Hibah FK-KMK menjelang akhir tahun untuk jadwal ronde berikutnya.",
+  url:"https://research.fkkmk.ugm.ac.id/informasi-hibah/"
+},
+{
+  id:"dppm-kemdiktisaintek",
+  nama:"Program Penelitian dan Pengabdian kepada Masyarakat",
+  pemberi:"DPPM, Kementerian Pendidikan Tinggi, Sains, dan Teknologi",
+  tipe:"Nasional",
+  fokus:["Riset dasar & terapan","Kesehatan masyarakat"],
+  nilai:"Mengikuti Standar Biaya Masukan tahun anggaran berjalan",
+  durasi:"Satu hingga beberapa tahun anggaran",
+  tenggat:null,
+  siklus:[11,12],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Hibah tahunan terbesar untuk dosen di bawah koordinasi Kemdiktisaintek, diajukan lewat laman BIMA. Skema mencakup penelitian dasar dan terapan serta pemberdayaan masyarakat. Untuk tahun anggaran 2026, proposal ditutup 29 Desember 2025 dengan persetujuan Direktur Penelitian paling lambat 30 Desember 2025.",
+  peringatan:"RAB wajib merujuk Standar Biaya Masukan yang berlaku, dan proposal berstatus ditolak oleh Direktur Penelitian tidak dapat diperbaiki. Pembukaan ronde mengikuti pengumuman klasterisasi perguruan tinggi, sehingga jadwalnya bergeser dari tahun ke tahun.",
+  url:"https://penelitian.ugm.ac.id/2025/12/16/penerimaan-proposal-penelitian-pendanaan-direktorat-penelitian-dan-pengabdian-kepada-masyarakat-kemdiktisaintek-tahun-anggaran-2026/"
+},
+{
+  id:"grant-riset-ugm",
+  nama:"Grant Riset dan skema penelitian eksternal UGM",
+  pemberi:"Universitas Gadjah Mada",
+  tipe:"Internal UGM",
+  fokus:["Riset dasar & terapan","Penguatan kapasitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[3,6],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Laman Informasi Hibah FK-KMK mendaftar beberapa skema penelitian eksternal UGM sepanjang 2026, termasuk Grant Riset dengan batas 30 Juni, Learning Center in Collaboration dengan batas 31 Maret, serta program penguatan ruang lingkup uji terakreditasi ISO/IEC 17025 dengan batas 15 Maret.",
+  peringatan:"Rincian setiap skema hanya tersedia lewat tautan di laman tersebut dan belum diverifikasi satu per satu. Perlakukan sebagai daftar pantau, bukan katalog final.",
+  url:"https://research.fkkmk.ugm.ac.id/informasi-hibah/"
+},
+{
+  id:"riim-kompetisi",
+  nama:"RIIM Kompetisi",
+  pemberi:"BRIN dan LPDP",
+  tipe:"Nasional",
+  fokus:["Kesehatan masyarakat","Riset dasar & terapan"],
+  nilai:"Pendanaan tahun jamak dari dana abadi penelitian",
+  durasi:"Hingga 3 tahun",
+  tenggat:null,
+  siklus:[4,7],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Skema kompetitif berbasis batch. Pada 2026 dibuka dua batch: Batch 1 hingga 13 April dan Batch 2 sepanjang 1-31 Juli, dengan seleksi Agustus-November dan penetapan Desember 2026. Ketua tim wajib bergelar S3, dan seorang periset maksimal terlibat dalam tiga usulan pada tahun berjalan.",
+  peringatan:"Sejumlah jenis riset dikecualikan: uji praklinik, uji klinik, uji validasi dan uji mutu, riset survei, riset aksi, riset kebijakan, riset ekspedisi, serta riset terkait sawit. Sebagian besar studi implementasi lapangan PKT tidak akan lolos filter ini - arahkan pengajuan ke komponen kebaruan metodologis.",
+  url:"https://pendanaan-risnov.brin.go.id/pendanaan"
+},
+{
+  id:"prima",
+  nama:"PRIMA - Program Riset Kebijakan Pembangunan Merah Putih",
+  pemberi:"BRIN dan LPDP",
+  tipe:"Nasional",
+  fokus:["Riset implementasi & kebijakan","Kesehatan masyarakat","Keterlibatan komunitas"],
+  nilai:"Pendanaan awal Rp 100 miliar untuk keseluruhan program",
+  durasi:"Belum diumumkan",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Skema baru yang diluncurkan 10 Agustus 2026 untuk mempertemukan kebutuhan riset kementerian dan lembaga dengan kapasitas peneliti perguruan tinggi. Mencakup 17 tema kebijakan, termasuk kesehatan, kesejahteraan dan keadilan sosial, serta ketahanan bencana. Alurnya dimulai dari KAK yang disusun kementerian, lalu Policy Council Meeting, sosialisasi, dan open call proposal.",
+  peringatan:"Mekanisme open call belum diumumkan pada saat katalog ini disusun. Karena skema ini digerakkan permintaan kementerian, jalur masuk yang efektif kemungkinan besar lewat hubungan dengan Kemenkes sejak tahap penyusunan KAK, bukan menunggu pengumuman terbit.",
+  url:"https://pendanaan-risnov.brin.go.id/pendanaan"
+},
+{
+  id:"rispro-lpdp",
+  nama:"RISPRO - Riset Inovatif Produktif",
+  pemberi:"LPDP, Kementerian Keuangan",
+  tipe:"Nasional",
+  fokus:["Riset dasar & terapan","Kesehatan masyarakat"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Skema pendanaan riset LPDP yang menekankan hasil riset yang dapat dimanfaatkan. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Status skema, jadwal panggilan, dan hubungannya dengan skema RIIM serta PRIMA belum diverifikasi. Jangan dijadikan dasar perencanaan sebelum dicek.",
+  url:""
+},
+{
+  id:"dipi",
+  nama:"Indonesian Science Fund (DIPI)",
+  pemberi:"Dana Ilmu Pengetahuan Indonesia",
+  tipe:"Nasional",
+  fokus:["Riset dasar & terapan","Kesehatan masyarakat"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Pendanaan riset kompetitif berbasis peer review di Indonesia. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Status operasional, skema aktif, dan jadwal panggilan belum diverifikasi dalam penyusunan katalog ini. Jangan dijadikan dasar perencanaan sebelum dicek.",
+  url:""
+},
+
+/* ============================================================
+   KANDIDAT YANG BELUM DIVERIFIKASI
+   ============================================================ */
+{
+  id:"amed",
+  nama:"Skema riset internasional AMED",
+  pemberi:"Japan Agency for Medical Research and Development",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Kesehatan masyarakat","Konsorsium & kemitraan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"AMED mendanai program riset penyakit menular yang melibatkan mitra Asia, termasuk lewat skema kerja sama bilateral. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Skema aktif dan kelayakan institusi Indonesia belum diverifikasi. Perlu diriset sebelum dijadikan target.",
+  url:""
+},
+{
+  id:"jsps",
+  nama:"Core-to-Core Program dan skema kerja sama JSPS",
+  pemberi:"Japan Society for the Promotion of Science",
+  tipe:"Internasional",
+  fokus:["Konsorsium & kemitraan","Penguatan kapasitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Program pembentukan jejaring riset berkelanjutan antara institusi Jepang dan mitra Asia, termasuk skema pertukaran peneliti. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Skema aktif, jadwal, dan mekanisme pengusulan dari sisi Indonesia belum diverifikasi.",
+  url:""
+},
+{
+  id:"fleming",
+  nama:"Fleming Fund",
+  pemberi:"Department of Health and Social Care, Inggris",
+  tipe:"Internasional",
+  fokus:["Resistensi antimikroba","One Health & zoonosis"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Program penguatan surveilans resistensi antimikroba dengan pendekatan One Health di negara berpendapatan rendah dan menengah. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Status program dan kelayakan Indonesia pada fase yang sedang berjalan belum diverifikasi. Perlu diriset sebelum dijadikan target.",
+  url:""
+},
+{
+  id:"dfat-australia",
+  nama:"Program kesehatan bilateral Australia-Indonesia",
+  pemberi:"DFAT Australia",
+  tipe:"Internasional",
+  fokus:["Sistem & keamanan kesehatan","Penguatan kapasitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Australia menjalankan program kesehatan bilateral dengan Indonesia, termasuk komponen keamanan kesehatan kawasan. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Nama program, mekanisme pengadaan, dan apakah ada jalur kompetitif untuk universitas belum diverifikasi.",
+  url:""
+},
+{
+  id:"daad",
+  nama:"Skema kerja sama riset dan mobilitas DAAD",
+  pemberi:"Deutscher Akademischer Austauschdienst",
+  tipe:"Internasional",
+  fokus:["Karier peneliti","Konsorsium & kemitraan","Penguatan kapasitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:1,
+  verifikasi:"belum",
+  catatan:"DAAD mendanai kemitraan institusional dan mobilitas peneliti antara Jerman dan negara mitra. Dicantumkan sebagai kandidat untuk diriset.",
+  peringatan:"Skema yang relevan untuk kedokteran tropis dan kelayakan institusi Indonesia belum diverifikasi.",
+  url:""
+},
+
+/* ============================================================
+   DI LUAR CAKUPAN - DICATAT AGAR TIDAK DIKEJAR BERULANG
+   ============================================================ */
+{
+  id:"nihr-ghr",
+  nama:"Global Health Research - program, fellowship, dan panggilan AMR",
+  pemberi:"NIHR, Inggris",
+  tipe:"Internasional",
+  fokus:["Sistem & keamanan kesehatan","Resistensi antimikroba","Penguatan kapasitas"],
+  nilai:"Hingga £5 juta pada panggilan keamanan kesehatan",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[],
+  fit:0,
+  verifikasi:"resmi",
+  catatan:"Sejak 2026 pendanaan NIHR difokuskan pada dua kawasan, Afrika sub-Sahara dan Asia Selatan, dengan tema keamanan kesehatan global. Panggilan tahunan yang diluncurkan April 2026 mengangkat uji tahap lanjut dan riset implementasi untuk resistensi antimikroba, dengan tingkatan dana hingga £5 juta. Skema fellowship dan professorship dibuka kembali, tetapi untuk kedua kawasan itu saja.",
+  peringatan:"Indonesia berada di luar cakupan geografis baru. Dicatat di sini agar tidak dikejar berulang kali - periksa ulang hanya jika ada pengumuman perubahan kawasan prioritas.",
+  url:"https://www.nihr.ac.uk/news/nihr-announces-global-health-research-calls-2026"
+},
+{
+  id:"edctp3",
+  nama:"Global Health EDCTP3 Work Programme",
+  pemberi:"Global Health EDCTP3 Joint Undertaking, Horizon Europe",
+  tipe:"Internasional",
+  fokus:["Malaria, TB & NTD","Penyakit menular","Iklim & kesehatan"],
+  nilai:"€1,5 juta - €10 juta per proyek",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[1,3],
+  fit:1,
+  verifikasi:"resmi",
+  catatan:"Program 2026 menyediakan hingga €147 juta untuk TB, infeksi saluran napas bawah, HIV, dan penyakit menular yang didorong perubahan iklim. Panggilan dua tahap dibuka Januari dengan tahap pertama 4 Maret 2026 dan proposal penuh 17 September 2026; panggilan CSA satu tahap ditutup akhir Agustus hingga awal September 2026.",
+  peringatan:"Sasaran programnya Afrika sub-Sahara. Institusi Indonesia bukan target utama dan hanya masuk lewat peran mitra tertentu dalam konsorsium. Jangan diperlakukan sebagai jalur pendanaan langsung.",
+  url:"https://www.global-health-edctp3.europa.eu/"
+},
+{
+  id:"ecf-rise",
+  nama:"RISE for Nutrition",
+  pemberi:"Eleanor Crook Foundation",
+  tipe:"Internasional",
+  fokus:["Gizi & kesehatan ibu-anak","Riset implementasi & kebijakan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[],
+  fit:0,
+  verifikasi:"resmi",
+  catatan:"Filantropi gizi global yang mendanai riset implementasi lewat portofolio RISE for Nutrition, bekerja sama dengan LSM dan universitas.",
+  peringatan:"Portofolio risetnya terpusat di Afrika Timur, dan sebagian besar hibah bersifat undangan. Meski secara prinsip mendanai LMIC, tidak ada jalur kompetitif terbuka untuk Indonesia pada saat pemeriksaan. Dicatat agar tidak dikejar tanpa undangan.",
+  url:"https://eleanorcrookfoundation.org/how-we-invest/grantmaking"
+}
+
+];
+
+/* ========================= UTIL ========================= */
+const NOW = new Date(); NOW.setHours(0,0,0,0);
+const BULAN = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+const BULAN_S = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+const d = s => { const [y,m,dd]=s.split("-").map(Number); const x=new Date(y,m-1,dd); x.setHours(0,0,0,0); return x; };
+const hariKe = t => Math.round((d(t)-NOW)/86400000);
+const tglPanjang = t => { const x=d(t); return x.getDate()+" "+BULAN[x.getMonth()]+" "+x.getFullYear(); };
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("on");
+  clearTimeout(t._x); t._x=setTimeout(()=>t.classList.remove("on"),2200);
+}
+
+document.getElementById("asOf").textContent =
+  "Dihitung ulang " + NOW.getDate()+" "+BULAN[NOW.getMonth()]+" "+NOW.getFullYear();
+
+/* status turunan */
+function status(g){
+  if(g.fit===0) return "tidak-layak";
+  if(g.tenggat){
+    const h=hariKe(g.tenggat);
+    if(h<0) return "tertutup";
+    return h<=30 ? "mendesak" : "terbuka";
+  }
+  return g.siklus && g.siklus.length ? "berulang" : "pantau";
+}
+
+/* bulan siklus terdekat di depan */
+function siklusBerikut(g){
+  if(!g.siklus || !g.siklus.length) return null;
+  const m=NOW.getMonth()+1;
+  let best=null,bestGap=99;
+  for(const s of g.siklus){
+    let gap=s-m; if(gap<0) gap+=12;
+    if(gap<bestGap){bestGap=gap;best=s;}
+  }
+  return {bulan:best,jarak:bestGap};
+}
+
+/* ========================= RENDER ENTRI ========================= */
+function renderEntry(g){
+  const st=status(g);
+  let cls="", kiri="";
+  if(st==="mendesak"){
+    cls="e-urgent";
+    const h=hariKe(g.tenggat);
+    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>"+(h===0?"tutup hari ini":h+" hari lagi")+"</span>";
+  }else if(st==="terbuka"){
+    cls="e-open";
+    const h=hariKe(g.tenggat);
+    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>"+h+" hari lagi</span>";
+  }else if(st==="tertutup"){
+    cls="e-closed";
+    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>sudah tutup</span>";
+  }else if(st==="berulang"){
+    const s=siklusBerikut(g);
+    kiri="<b>"+BULAN_S[s.bulan-1]+"</b><span class='rel'>siklus historis</span>";
+  }else if(st==="tidak-layak"){
+    cls="e-closed";
+    kiri="<b>-</b><span class='rel'>di luar cakupan</span>";
+  }else{
+    kiri="<b>-</b><span class='rel'>jadwal belum jelas</span>";
+  }
+
+  const vLabel={resmi:"sumber resmi",sekunder:"sumber sekunder",belum:"belum diverifikasi"}[g.verifikasi];
+  const fitLabel=["Di luar cakupan","Kecocokan rendah","Kecocokan sedang","Kecocokan tinggi"][g.fit];
+
+  const judul = g.url
+    ? "<a href='"+esc(g.url)+"' target='_blank' rel='noopener'>"+esc(g.nama)+"</a>"
+    : esc(g.nama);
+
+  return "<article class='entry "+cls+"' data-id='"+g.id+"'>"
+    + "<div class='when'>"+kiri+"</div>"
+    + "<div class='body'>"
+    +   "<h3>"+judul+"</h3>"
+    +   "<p class='funder'>"+esc(g.pemberi)+" · "+esc(g.nilai)+"</p>"
+    +   "<p class='note'>"+esc(g.catatan)+"</p>"
+    +   (g.peringatan ? "<p class='warn'>"+esc(g.peringatan)+"</p>" : "")
+    +   "<div class='tags'>"
+    +     "<span class='tag fit"+g.fit+"'>"+fitLabel+"</span>"
+    +     "<span class='tag v-"+g.verifikasi+"'>"+vLabel+"</span>"
+    +     "<span class='tag'>"+esc(g.tipe)+"</span>"
+    +     g.fokus.map(f=>"<span class='tag'>"+esc(f)+"</span>").join("")
+    +     "<button class='addbtn' type='button' data-add='"+g.id+"'>Masukkan ke pipeline</button>"
+    +   "</div>"
+    + "</div></article>";
+}
+
+function paint(el,arr,kosong){
+  el.innerHTML = arr.length ? arr.map(renderEntry).join("")
+    : "<p class='empty'>"+kosong+"</p>";
+}
+
+/* ========================= RADAR ========================= */
+function buildRadar(){
+  const open = KATALOG.filter(g=>["terbuka","mendesak"].includes(status(g)))
+    .sort((a,b)=>d(a.tenggat)-d(b.tenggat));
+  const soon = KATALOG.filter(g=>{
+    if(status(g)!=="berulang") return false;
+    const s=siklusBerikut(g); return s && s.jarak<=4;
+  }).sort((a,b)=>siklusBerikut(a).jarak-siklusBerikut(b).jarak);
+  const closed = KATALOG.filter(g=>status(g)==="tertutup" && hariKe(g.tenggat)>-120)
+    .sort((a,b)=>d(b.tenggat)-d(a.tenggat));
+
+  paint(document.getElementById("listOpen"),open,
+    "Tidak ada panggilan dengan tenggat pasti yang sedang terbuka. Lihat “Segera dibuka kembali” untuk skema yang siklusnya mendekat.");
+  paint(document.getElementById("listSoon"),soon,
+    "Tidak ada skema berulang yang siklusnya jatuh dalam empat bulan ke depan.");
+  paint(document.getElementById("listClosed"),closed,
+    "Tidak ada panggilan yang tutup dalam 120 hari terakhir.");
+}
+
+/* ========================= STRIP 12 BULAN ========================= */
+function buildStrip(){
+  const strip=document.getElementById("strip");
+  const start=new Date(NOW.getFullYear(),NOW.getMonth(),1);
+  const end=new Date(start.getFullYear(),start.getMonth()+12,1);
+  const span=end-start;
+  document.getElementById("stripRange").textContent =
+    BULAN_S[start.getMonth()]+" "+start.getFullYear()+" - "+BULAN_S[(start.getMonth()+11)%12]+" "+(new Date(start.getFullYear(),start.getMonth()+11,1)).getFullYear();
+
+  let html="";
+  for(let i=0;i<12;i++){
+    const m=new Date(start.getFullYear(),start.getMonth()+i,1);
+    html+="<div class='strip-month' style='left:"+((m-start)/span*100)+"%'>"+BULAN_S[m.getMonth()]+"</div>";
+  }
+  KATALOG.forEach(g=>{
+    const st=status(g);
+    let when=null,kind="";
+    if(st==="terbuka"||st==="mendesak"){ when=d(g.tenggat); kind=st==="mendesak"?"t-urgent":"t-open"; }
+    else if(st==="berulang"){
+      const s=siklusBerikut(g);
+      when=new Date(start.getFullYear(),start.getMonth()+s.jarak,15);
+    }
+    if(!when||when<start||when>=end) return;
+    const left=(when-start)/span*100;
+    const h=(st==="berulang")?40:60;
+    html+="<button class='tick "+kind+"' style='left:"+left+"%;height:"+h+"%' "
+       +"title='"+esc(g.nama)+" - "+esc(g.pemberi)+"' data-goto='"+g.id+"' aria-label='"+esc(g.nama)+"'></button>";
+  });
+  strip.innerHTML=html;
+}
+
+/* ========================= CARI ========================= */
+const fFokus=document.getElementById("fFokus"),
+      fTipe=document.getElementById("fTipe"),
+      fStatus=document.getElementById("fStatus"),
+      fFit=document.getElementById("fFit"),
+      q=document.getElementById("q");
+
+[...new Set(KATALOG.flatMap(g=>g.fokus))].sort().forEach(f=>{
+  fFokus.insertAdjacentHTML("beforeend","<option>"+esc(f)+"</option>");});
+[...new Set(KATALOG.map(g=>g.tipe))].sort().forEach(t=>{
+  fTipe.insertAdjacentHTML("beforeend","<option>"+esc(t)+"</option>");});
+["mendesak","terbuka","berulang","tertutup","pantau","tidak-layak"].forEach(s=>{
+  fStatus.insertAdjacentHTML("beforeend","<option value='"+s+"'>"+s+"</option>");});
+
+function buildCari(){
+  const term=q.value.trim().toLowerCase();
+  const res=KATALOG.filter(g=>{
+    if(fFokus.value && !g.fokus.includes(fFokus.value)) return false;
+    if(fTipe.value && g.tipe!==fTipe.value) return false;
+    if(fStatus.value && status(g)!==fStatus.value) return false;
+    if(fFit.getAttribute("aria-pressed")==="true" && g.fit<3) return false;
+    if(term){
+      const hay=(g.nama+" "+g.pemberi+" "+g.fokus.join(" ")+" "+g.catatan+" "+g.tipe).toLowerCase();
+      if(!hay.includes(term)) return false;
+    }
+    return true;
+  }).sort((a,b)=>{
+    const rank=s=>({mendesak:0,terbuka:1,berulang:2,pantau:3,tertutup:4,"tidak-layak":5})[s];
+    const r=rank(status(a))-rank(status(b)); if(r) return r;
+    return b.fit-a.fit;
+  });
+  document.getElementById("count").textContent=res.length+" dari "+KATALOG.length+" skema";
+  paint(document.getElementById("listAll"),res,"Tidak ada skema yang cocok dengan saringan ini.");
+}
+[q,fFokus,fTipe,fStatus].forEach(el=>el.addEventListener("input",buildCari));
+fFit.addEventListener("click",()=>{
+  fFit.setAttribute("aria-pressed",fFit.getAttribute("aria-pressed")==="true"?"false":"true");
+  buildCari();
+});
+
+/* ========================= SIKLUS ========================= */
+function buildSiklus(){
+  const rows=[];
+  for(let m=1;m<=12;m++){
+    const hits=KATALOG.filter(g=>g.siklus && g.siklus.includes(m));
+    if(!hits.length) continue;
+    rows.push("<tr><td class='mon'>"+BULAN[m-1]+"</td><td>"
+      + hits.map(g=>"<div style='margin-bottom:5px'><strong>"+esc(g.nama)+"</strong> - "+esc(g.pemberi)+"</div>").join("")
+      + "</td></tr>");
+  }
+  const tanpa=KATALOG.filter(g=>!g.siklus || !g.siklus.length);
+  if(tanpa.length){
+    rows.push("<tr><td class='mon'>Belum berpola</td><td>"
+      + tanpa.map(g=>"<div style='margin-bottom:5px'><strong>"+esc(g.nama)+"</strong> - "+esc(g.pemberi)+"</div>").join("")
+      + "</td></tr>");
+  }
+  document.getElementById("cycleBody").innerHTML=rows.join("");
+}
+
+/* ========================= PIPELINE ========================= */
+const TAHAP=["Dipantau","Konsep","Penulisan","Diajukan","Hasil"];
+const KEY="radar-hibah-kedokteran-tropis-pipeline";
+let pipe=[];
+try{ pipe=JSON.parse(localStorage.getItem(KEY)||"[]"); if(!Array.isArray(pipe)) pipe=[]; }
+catch(e){ pipe=[]; }
+
+function savePipe(){
+  try{ localStorage.setItem(KEY,JSON.stringify(pipe)); }
+  catch(e){ toast("Penyimpanan peramban tidak tersedia - ekspor JSON untuk menyimpan."); }
+}
+function buildPipe(){
+  document.getElementById("pipeGrid").innerHTML=TAHAP.map((t,i)=>{
+    const items=pipe.filter(p=>p.tahap===i);
+    return "<div class='col'><h4>"+t+" ("+items.length+")</h4>"
+      + (items.length?items.map(p=>{
+          let due="";
+          if(p.due){ const h=hariKe(p.due); due=tglPanjang(p.due)+(h>=0?" · "+h+" hari lagi":" · lewat"); }
+          return "<div class='card'><strong>"+esc(p.nama)+"</strong>"
+            + "<div class='meta'>"+esc(p.owner||"belum ada penanggung jawab")+(due?" · "+due:"")+"</div>"
+            + "<div class='card-act'>"
+            + (i>0?"<button class='mini' data-mv='"+p.id+"' data-dir='-1'>Mundur</button>":"")
+            + (i<TAHAP.length-1?"<button class='mini' data-mv='"+p.id+"' data-dir='1'>Maju</button>":"")
+            + "<button class='mini' data-del='"+p.id+"'>Hapus</button>"
+            + "</div></div>";
+        }).join(""):"<p class='meta' style='color:var(--ink-faint);font-size:12px'>Kosong</p>")
+      + "</div>";
+  }).join("");
+}
+document.getElementById("pAdd").addEventListener("click",()=>{
+  const nama=document.getElementById("pName").value.trim();
+  if(!nama){ toast("Isi nama skema dulu."); return; }
+  pipe.push({id:"p"+Date.now(),nama,owner:document.getElementById("pOwner").value.trim(),
+             due:document.getElementById("pDue").value||null,tahap:0});
+  savePipe(); buildPipe();
+  document.getElementById("pName").value="";document.getElementById("pOwner").value="";document.getElementById("pDue").value="";
+  toast("Ditambahkan ke pipeline.");
+});
+document.getElementById("pipeGrid").addEventListener("click",e=>{
+  const mv=e.target.dataset.mv, del=e.target.dataset.del;
+  if(mv){ const p=pipe.find(x=>x.id===mv);
+    p.tahap=Math.max(0,Math.min(TAHAP.length-1,p.tahap+Number(e.target.dataset.dir)));
+    savePipe(); buildPipe(); }
+  if(del){ pipe=pipe.filter(x=>x.id!==del); savePipe(); buildPipe(); toast("Dihapus."); }
+});
+document.getElementById("pExport").addEventListener("click",()=>{
+  const blob=new Blob([JSON.stringify(pipe,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="pipeline-hibah-kedokteran-tropis-"+NOW.toISOString().slice(0,10)+".json";
+  a.click(); URL.revokeObjectURL(a.href);
+});
+document.getElementById("pImportBtn").addEventListener("click",()=>document.getElementById("pImport").click());
+document.getElementById("pImport").addEventListener("change",e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{
+      const arr=JSON.parse(r.result);
+      if(!Array.isArray(arr)) throw 0;
+      pipe=arr; savePipe(); buildPipe(); toast("Pipeline dimuat dari berkas.");
+    }catch(err){ toast("Berkas tidak terbaca sebagai pipeline JSON."); } };
+  r.readAsText(f);
+});
+
+/* tombol "masukkan ke pipeline" pada kartu */
+document.addEventListener("click",e=>{
+  const id=e.target.dataset.add;
+  if(!id) return;
+  const g=KATALOG.find(x=>x.id===id);
+  pipe.push({id:"p"+Date.now(),nama:g.nama,owner:"",due:g.tenggat||null,tahap:0});
+  savePipe(); buildPipe(); toast("“"+g.nama+"” masuk ke Dipantau.");
+});
+
+/* ========================= UPDATE TAB ========================= */
+function buildStale(){
+  const lewat=KATALOG.filter(g=>g.tenggat && hariKe(g.tenggat)<0);
+  const belum=KATALOG.filter(g=>g.verifikasi==="belum");
+  document.getElementById("staleReport").innerHTML =
+    lewat.length+" entri punya tenggat yang sudah lewat dan perlu diperbarui ke ronde berikutnya. "
+    + belum.length+" entri masih berstatus belum diverifikasi: "
+    + belum.map(g=>esc(g.nama)).join(", ") + ".";
+}
+document.getElementById("copyPrompt").addEventListener("click",()=>{
+  const teks =
+"Perbarui katalog Radar Hibah Kedokteran Tropis. Konteks: Center for Tropical Medicine, FK-KMK Universitas Gadjah Mada, Yogyakarta. "
++"Portofolio riset mencakup penyakit menular tropis, One Health dan zoonosis, malaria termasuk pengendalian vektor, dengue dan Wolbachia, tuberkulosis, "
++"integrasi TB dengan gizi ibu dan anak, pencegahan stunting, serosurvei, pemodelan epidemiologi, dan riset implementasi. "
++"Jaringan lapangan aktif di Nusa Tenggara Timur. Institusi berstatus PTN-BH, bukan NGO.\n\n"
++"Tugas: (1) verifikasi ulang setiap entri yang tenggatnya sudah lewat dan cari tanggal ronde berikutnya; "
++"(2) verifikasi entri yang berstatus belum diverifikasi; "
++"(3) cari skema baru yang layak untuk institusi Indonesia dan cocok dengan portofolio di atas; "
++"(4) periksa perubahan aturan kelayakan, khususnya klausul pita pendapatan dan cakupan kawasan.\n\n"
++"Kembalikan hasilnya sebagai blok KATALOG yang siap ditempel ke index.html, dengan field yang sama persis. "
++"Isi field verifikasi dengan jujur: resmi hanya jika tanggalnya terbaca di halaman funder. "
++"Jangan mengisi nilai hibah atau tenggat berdasarkan perkiraan - tulis 'Belum diverifikasi' bila tidak ada sumbernya.";
+  navigator.clipboard.writeText(teks).then(
+    ()=>toast("Prompt tersalin."),
+    ()=>toast("Penyalinan gagal - pilih teks secara manual."));
+});
+
+/* ========================= TAB & TEMA ========================= */
+document.querySelectorAll(".tab").forEach(t=>{
+  t.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected","false"));
+    t.setAttribute("aria-selected","true");
+    document.querySelectorAll(".panel").forEach(p=>p.hidden=true);
+    document.getElementById("p-"+t.dataset.panel).hidden=false;
+    window.scrollTo({top:0,behavior:"instant"});
+  });
+});
+document.getElementById("strip").addEventListener("click",e=>{
+  const id=e.target.dataset.goto; if(!id) return;
+  document.querySelector('.tab[data-panel="cari"]').click();
+  q.value=KATALOG.find(g=>g.id===id).nama; buildCari();
+});
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const dark=window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const next=cur ? (cur==="dark"?"light":"dark") : (dark?"light":"dark");
+  document.documentElement.setAttribute("data-theme",next);
+});
+
+/* ========================= INIT ========================= */
+buildRadar(); buildStrip(); buildCari(); buildSiklus(); buildPipe(); buildStale();
+</script>
+</body>
+</html>
