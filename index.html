@@ -74,18 +74,32 @@ h1{
 .mast-meta{font-size:13px;color:var(--ink-faint);text-align:right;line-height:1.4}
 .themetog{background:none;border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12px;color:var(--ink-soft);margin-top:8px}
 
-/* ---------- year strip ---------- */
-.strip-shell{background:var(--surface);border-bottom:1px solid var(--line);padding:0 0 22px}
-.strip-head{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink-faint);margin-bottom:9px}
-.strip{position:relative;height:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line-soft)}
-.strip-month{position:absolute;top:0;bottom:0;border-left:1px solid var(--line-soft);font-size:10.5px;color:var(--ink-faint);padding:3px 0 0 4px;white-space:nowrap}
+/* ---------- kartu ringkasan ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:10px;padding:18px 0 0}
+.kpi{background:var(--surface);border:1px solid var(--line-soft);border-left:3px solid var(--line);border-radius:3px;padding:12px 14px}
+.kpi b{display:block;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:32px;line-height:1;letter-spacing:-.01em}
+.kpi span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:5px;line-height:1.35}
+.kpi.k-alert{border-left-color:var(--alert)}
+.kpi.k-signal{border-left-color:var(--signal)}
+.kpi.k-calm{border-left-color:var(--calm)}
+.kpi.k-ink{border-left-color:var(--ink)}
+
+/* ---------- garis waktu 12 bulan ---------- */
+.strip-shell{background:var(--surface);border-bottom:1px solid var(--line);padding:20px 0 20px}
+.strip-head{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink-faint);margin-bottom:10px}
+.strip{position:relative;border-bottom:1px solid var(--line)}
+.strip-labels{position:relative}
+.slab{position:absolute;font-size:10.5px;line-height:1.25;color:var(--ink-soft);width:104px;padding-left:5px;border-left:1px solid var(--line-soft);cursor:pointer;background:none;text-align:left;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.slab:hover,.slab:focus-visible{color:var(--ink);border-left-color:var(--ink)}
+.strip-axis{position:relative;height:26px;border-top:1px solid var(--line-soft)}
+.strip-month{position:absolute;top:0;bottom:0;border-left:1px solid var(--line-soft);font-size:10.5px;color:var(--ink-faint);padding:6px 0 0 5px;white-space:nowrap}
 .strip-month:first-child{border-left:none}
-.tick{position:absolute;bottom:0;width:3px;border-radius:2px 2px 0 0;background:var(--calm);cursor:pointer;border:none;padding:0}
+.tick{position:absolute;top:-4px;width:8px;height:8px;border-radius:50%;background:var(--calm);cursor:pointer;border:none;padding:0;margin-left:-4px}
 .tick.t-open{background:var(--signal)}
 .tick.t-urgent{background:var(--alert)}
-.tick:hover,.tick:focus-visible{width:5px}
-.strip-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin-top:9px}
-.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.tick:hover,.tick:focus-visible{transform:scale(1.5)}
+.strip-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin-top:11px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:-1px}
 
 /* ---------- tabs ---------- */
 nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
@@ -93,6 +107,8 @@ nav.tabs{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:
 .tabrow::-webkit-scrollbar{display:none}
 .tab{background:none;border:none;padding:13px 14px;font-size:14px;color:var(--ink-soft);white-space:nowrap;border-bottom:2px solid transparent;font-weight:500}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+.tab .cnt{font-size:11.5px;color:var(--ink-faint);margin-left:5px;font-weight:400}
+.tab[aria-selected="true"] .cnt{color:var(--ink-soft)}
 
 main{padding:26px 0 70px}
 .panel[hidden]{display:none}
@@ -113,32 +129,38 @@ input[type=search]{min-width:220px;flex:1 1 240px}
 
 /* ---------- entries ---------- */
 .list{border-top:1px solid var(--line)}
-.entry{display:grid;grid-template-columns:96px 1fr;gap:0;border-bottom:1px solid var(--line-soft);background:var(--surface)}
+.entry{display:grid;grid-template-columns:78px minmax(0,1fr) 190px;border-bottom:1px solid var(--line-soft);background:var(--surface)}
 .entry:nth-child(even){background:var(--surface-2)}
-.when{
-  padding:16px 12px 16px 14px;border-left:3px solid var(--calm);
-  font-size:13px;color:var(--ink-soft);line-height:1.35;
-}
+.when{padding:15px 10px 15px 13px;border-left:3px solid var(--calm);text-align:center}
 .entry.e-open .when{border-left-color:var(--signal)}
 .entry.e-urgent .when{border-left-color:var(--alert)}
 .entry.e-closed .when{border-left-color:var(--closed)}
-.when b{display:block;font-family:Newsreader,Georgia,serif;font-size:20px;font-weight:500;color:var(--ink);line-height:1.1}
-.when .rel{display:block;margin-top:3px;font-size:12px}
-.entry.e-urgent .when .rel{color:var(--alert);font-weight:600}
-.body{padding:15px 16px 16px 14px;min-width:0}
-.body h3{margin:0 0 3px;font-size:16px;font-weight:600;line-height:1.3}
+.when b{display:block;font-family:Newsreader,Georgia,serif;font-size:28px;font-weight:500;line-height:1}
+.entry.e-urgent .when b{color:var(--alert)}
+.when .rel{display:block;margin-top:4px;font-size:10px;color:var(--ink-faint);letter-spacing:.04em}
+.body{padding:14px 14px 15px 12px;min-width:0}
+.body h3{margin:0 0 2px;font-size:15.5px;font-weight:600;line-height:1.3}
 .body h3 a{text-decoration:none;border-bottom:1px solid var(--line)}
 .body h3 a:hover{border-bottom-color:var(--ink)}
-.funder{font-size:13px;color:var(--ink-soft);margin:0 0 8px}
-.note{font-size:13.5px;color:var(--ink-soft);margin:0 0 9px;max-width:78ch}
-.warn{border-left:2px solid var(--alert);padding-left:9px;color:var(--ink);font-size:13px;margin:0 0 9px;max-width:78ch}
+.funder{font-size:12.5px;color:var(--ink-soft);margin:0 0 8px}
+.note{font-size:13px;color:var(--ink-soft);margin:0 0 9px;max-width:74ch}
+.warn{border-left:2px solid var(--alert);padding-left:9px;color:var(--ink);font-size:12.5px;margin:0 0 9px;max-width:74ch}
 .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.tag{font-size:11.5px;color:var(--ink-soft);border:1px solid var(--line);border-radius:2px;padding:2px 6px}
+.tag{font-size:11px;color:var(--ink-soft);border:1px solid var(--line);border-radius:2px;padding:2px 6px}
+.tag.st{border-color:var(--signal);color:var(--signal)}
+.tag.st-urgent{border-color:var(--alert);color:var(--alert)}
+.tag.st-cycle{border-color:var(--calm);color:var(--calm)}
+.tag.st-off{border-color:var(--closed);color:var(--closed)}
+.tag.role{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tag.role-alt{border-color:var(--signal);color:var(--signal)}
+.tag.role-off{border-color:var(--closed);color:var(--closed)}
 .tag.v-resmi{border-color:var(--calm);color:var(--calm)}
 .tag.v-sekunder{border-color:var(--signal);color:var(--signal)}
 .tag.v-belum{border-color:var(--alert);color:var(--alert)}
-.tag.fit3{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.addbtn{background:none;border:1px solid var(--line);border-radius:3px;padding:3px 9px;font-size:12px;color:var(--ink-soft);margin-left:auto}
+.meta{padding:15px 14px 15px 10px;text-align:right;font-size:12px;color:var(--ink-soft);line-height:1.45;border-left:1px solid var(--line-soft)}
+.meta .amt{color:var(--ink);display:block;margin-bottom:3px}
+.meta .dt{display:block;margin-top:7px;color:var(--ink-faint)}
+.addbtn{background:none;border:1px solid var(--line);border-radius:3px;padding:3px 8px;font-size:11.5px;color:var(--ink-soft);margin-top:9px}
 .addbtn:hover{border-color:var(--ink);color:var(--ink)}
 .empty{padding:34px 4px;color:var(--ink-faint);font-size:14px}
 
@@ -173,14 +195,20 @@ pre{background:var(--surface);border:1px solid var(--line-soft);border-radius:3p
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 17px;border-radius:3px;font-size:13.5px;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
 .toast.on{opacity:1}
 
+@media (max-width:820px){
+  .entry{grid-template-columns:70px minmax(0,1fr)}
+  .meta{grid-column:1 / -1;text-align:left;border-left:none;border-top:1px solid var(--line-soft);padding:9px 14px 12px 16px}
+  .meta .amt{display:inline}
+  .meta .dt{display:inline;margin-left:8px}
+}
 @media (max-width:640px){
   .entry{grid-template-columns:1fr}
-  .when{border-left-width:3px;border-bottom:1px solid var(--line-soft);padding:11px 14px;display:flex;align-items:baseline;gap:9px}
-  .when b{display:inline;font-size:17px}
+  .when{border-bottom:1px solid var(--line-soft);padding:10px 14px;display:flex;align-items:baseline;gap:8px;text-align:left}
+  .when b{display:inline;font-size:19px}
   .when .rel{display:inline;margin:0}
   .body{padding:13px 14px 15px}
   .mast-meta{text-align:left}
-  .strip{height:52px}
+  .slab{display:none}
 }
 </style>
 </head>
@@ -202,11 +230,17 @@ pre{background:var(--surface);border:1px solid var(--line-soft);border-radius:3p
 
 <div class="strip-shell">
   <div class="wrap">
+    <div class="kpis" id="kpis"></div>
+  </div>
+  <div class="wrap" style="padding-top:22px">
     <div class="strip-head">
       <span>Tenggat 12 bulan ke depan</span>
       <span id="stripRange"></span>
     </div>
-    <div class="strip" id="strip"></div>
+    <div class="strip">
+      <div class="strip-labels" id="stripLabels"></div>
+      <div class="strip-axis" id="stripAxis"></div>
+    </div>
     <div class="strip-legend">
       <span><i class="dot" style="background:var(--alert)"></i>Tutup dalam 30 hari</span>
       <span><i class="dot" style="background:var(--signal)"></i>Terbuka, tenggat pasti</span>
@@ -217,12 +251,12 @@ pre{background:var(--surface);border:1px solid var(--line-soft);border-radius:3p
 
 <nav class="tabs">
   <div class="wrap tabrow" role="tablist">
-    <button class="tab" role="tab" data-panel="radar" aria-selected="true">Radar</button>
-    <button class="tab" role="tab" data-panel="cari" aria-selected="false">Cari &amp; saring</button>
-    <button class="tab" role="tab" data-panel="siklus" aria-selected="false">Siklus tahunan</button>
-    <button class="tab" role="tab" data-panel="pipeline" aria-selected="false">Pipeline tim</button>
-    <button class="tab" role="tab" data-panel="kelayakan" aria-selected="false">Kelayakan &amp; pengecualian</button>
-    <button class="tab" role="tab" data-panel="update" aria-selected="false">Perbarui data</button>
+    <button class="tab" role="tab" data-panel="radar" aria-selected="true">Radar<span class="cnt" id="c-radar"></span></button>
+    <button class="tab" role="tab" data-panel="cari" aria-selected="false">Cari &amp; saring<span class="cnt" id="c-cari"></span></button>
+    <button class="tab" role="tab" data-panel="siklus" aria-selected="false">Siklus tahunan<span class="cnt" id="c-siklus"></span></button>
+    <button class="tab" role="tab" data-panel="pipeline" aria-selected="false">Pipeline tim<span class="cnt" id="c-pipeline"></span></button>
+    <button class="tab" role="tab" data-panel="kelayakan" aria-selected="false">Kelayakan &amp; pengecualian<span class="cnt" id="c-kelayakan"></span></button>
+    <button class="tab" role="tab" data-panel="update" aria-selected="false">Perbarui data<span class="cnt" id="c-update"></span></button>
   </div>
 </nav>
 
@@ -391,6 +425,8 @@ const KATALOG = [
    ============================================================ */
 {
   id:"wellcome-discovery",
+  wilayah:"Inggris",
+  peran:"Bisa memimpin",
   nama:"Wellcome Discovery Awards",
   pemberi:"Wellcome Trust",
   tipe:"Internasional",
@@ -407,6 +443,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-cda",
+  wilayah:"Inggris",
+  peran:"Perorangan",
   nama:"Wellcome Career Development Awards",
   pemberi:"Wellcome Trust",
   tipe:"Internasional",
@@ -423,6 +461,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-eca",
+  wilayah:"Inggris",
+  peran:"Perorangan",
   nama:"Wellcome Early-Career Awards",
   pemberi:"Wellcome Trust",
   tipe:"Internasional",
@@ -439,6 +479,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-idcta",
+  wilayah:"Inggris",
+  peran:"Bisa memimpin",
   nama:"Infectious Disease Clinical Trial Award",
   pemberi:"Wellcome Trust dengan NIHR",
   tipe:"Internasional",
@@ -455,6 +497,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-idctda",
+  wilayah:"Inggris",
+  peran:"Bisa memimpin",
   nama:"Infectious Disease Clinical Trial Development Award",
   pemberi:"Wellcome Trust dengan NIHR",
   tipe:"Internasional",
@@ -471,6 +515,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-hubs",
+  wilayah:"Inggris",
+  peran:"Bisa memimpin",
   nama:"Infrastructure Hubs for Evidence Synthesis in LMICs",
   pemberi:"Wellcome Trust",
   tipe:"Internasional",
@@ -487,6 +533,8 @@ const KATALOG = [
 },
 {
   id:"wellcome-climate",
+  wilayah:"Inggris",
+  peran:"Bisa memimpin",
   nama:"Climate and Health Awards",
   pemberi:"Wellcome Trust",
   tipe:"Internasional",
@@ -503,6 +551,8 @@ const KATALOG = [
 },
 {
   id:"fogarty-k43",
+  wilayah:"Amerika Serikat",
+  peran:"Perorangan",
   nama:"Emerging Global Leader Award (K43)",
   pemberi:"Fogarty International Center, NIH",
   tipe:"Internasional",
@@ -519,6 +569,8 @@ const KATALOG = [
 },
 {
   id:"fogarty-d43-gid",
+  wilayah:"Amerika Serikat",
+  peran:"Perlu dicek",
   nama:"Global Infectious Diseases Research Training (D43)",
   pemberi:"Fogarty International Center, NIH",
   tipe:"Internasional",
@@ -535,6 +587,8 @@ const KATALOG = [
 },
 {
   id:"fogarty-launch",
+  wilayah:"Amerika Serikat",
+  peran:"Perlu dicek",
   nama:"LAUNCHing Leaders in Global Health Research (D43)",
   pemberi:"Fogarty International Center, NIH",
   tipe:"Internasional",
@@ -551,6 +605,8 @@ const KATALOG = [
 },
 {
   id:"nih-di-research",
+  wilayah:"Amerika Serikat",
+  peran:"Perlu dicek",
   nama:"Dissemination and Implementation Research in Health (R03/R21)",
   pemberi:"NIH, dengan Fogarty sebagai mitra",
   tipe:"Internasional",
@@ -567,6 +623,8 @@ const KATALOG = [
 },
 {
   id:"sea-dream",
+  wilayah:"Asia Tenggara",
+  peran:"Bisa memimpin",
   nama:"DREAM 4 Health",
   pemberi:"SEA DREAM - SEAMEO Secretariat, Wellcome Trust, FCDO",
   tipe:"Regional",
@@ -583,6 +641,8 @@ const KATALOG = [
 },
 {
   id:"tdr-searo",
+  wilayah:"PBB / WHO",
+  peran:"Bisa memimpin",
   nama:"Joint SEARO/TDR Impact Grants",
   pemberi:"WHO SEARO dan TDR",
   tipe:"Regional",
@@ -599,6 +659,8 @@ const KATALOG = [
 },
 {
   id:"horizon-cl1",
+  wilayah:"Uni Eropa",
+  peran:"Mitra saja",
   nama:"Horizon Europe Cluster 1 - Health",
   pemberi:"Komisi Eropa, HaDEA",
   tipe:"Internasional",
@@ -615,6 +677,8 @@ const KATALOG = [
 },
 {
   id:"toyota-intl",
+  wilayah:"Jepang",
+  peran:"Mitra saja",
   nama:"International Grant Program",
   pemberi:"The Toyota Foundation",
   tipe:"Internasional",
@@ -631,6 +695,8 @@ const KATALOG = [
 },
 {
   id:"ghit-trp",
+  wilayah:"Jepang",
+  peran:"Mitra saja",
   nama:"Target Research, Product Development, dan Screening Platform",
   pemberi:"GHIT Fund",
   tipe:"Internasional",
@@ -647,6 +713,8 @@ const KATALOG = [
 },
 {
   id:"right-fund",
+  wilayah:"Korea Selatan",
+  peran:"Mitra saja",
   nama:"Product Development Award dan skema lain",
   pemberi:"RIGHT Foundation, Korea",
   tipe:"Internasional",
@@ -663,6 +731,8 @@ const KATALOG = [
 },
 {
   id:"gates-gc",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
   nama:"Grand Challenges - panggilan bergulir",
   pemberi:"Gates Foundation",
   tipe:"Internasional",
@@ -679,6 +749,8 @@ const KATALOG = [
 },
 {
   id:"gcc",
+  wilayah:"Kanada",
+  peran:"Bisa memimpin",
   nama:"Bold Ideas with Big Impact",
   pemberi:"Grand Challenges Canada",
   tipe:"Internasional",
@@ -695,6 +767,8 @@ const KATALOG = [
 },
 {
   id:"escmid-individual",
+  wilayah:"Eropa",
+  peran:"Perorangan",
   nama:"Individual Research Grant",
   pemberi:"ESCMID",
   tipe:"Internasional",
@@ -711,6 +785,8 @@ const KATALOG = [
 },
 {
   id:"escmid-sg",
+  wilayah:"Eropa",
+  peran:"Perorangan",
   nama:"Study Group Research Grant",
   pemberi:"ESCMID",
   tipe:"Internasional",
@@ -727,6 +803,8 @@ const KATALOG = [
 },
 {
   id:"astmh-magill",
+  wilayah:"Amerika Serikat",
+  peran:"Perorangan",
   nama:"Alan J. Magill Fellowship dan penghargaan ASTMH lain",
   pemberi:"American Society of Tropical Medicine and Hygiene",
   tipe:"Internasional",
@@ -743,6 +821,8 @@ const KATALOG = [
 },
 {
   id:"repurposing",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
   nama:"Generic Drug Repurposing",
   pemberi:"Coefficient Giving dengan Cures Within Reach",
   tipe:"Internasional",
@@ -759,6 +839,8 @@ const KATALOG = [
 },
 {
   id:"par-antibiotics",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
   nama:"Beyond Antibiotics - Preventive Strategies",
   pemberi:"PAR Foundation",
   tipe:"Internasional",
@@ -775,6 +857,8 @@ const KATALOG = [
 },
 {
   id:"jpiamr",
+  wilayah:"Uni Eropa",
+  peran:"Mitra saja",
   nama:"Joint Transnational Call - One Health AMR",
   pemberi:"European Partnership One Health AMR, penerus JPIAMR",
   tipe:"Internasional",
@@ -791,6 +875,8 @@ const KATALOG = [
 },
 {
   id:"aciar-airpoh",
+  wilayah:"Australia / Kanada",
+  peran:"Bisa memimpin",
   nama:"One Health Research Program (AIRPOH) dan skema ACIAR lain",
   pemberi:"ACIAR Australia dengan IDRC Kanada",
   tipe:"Internasional",
@@ -807,6 +893,8 @@ const KATALOG = [
 },
 {
   id:"unicef-idn",
+  wilayah:"PBB / Indonesia",
+  peran:"Bisa memimpin",
   nama:"Expression of Interest - program gizi dan kesehatan",
   pemberi:"UNICEF Indonesia",
   tipe:"Nasional",
@@ -823,6 +911,8 @@ const KATALOG = [
 },
 {
   id:"cepf-wallacea",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
   nama:"Small dan Large Grants - Wallacea",
   pemberi:"Critical Ecosystem Partnership Fund",
   tipe:"Nasional",
@@ -843,6 +933,8 @@ const KATALOG = [
    ============================================================ */
 {
   id:"damas-fkkmk",
+  wilayah:"UGM",
+  peran:"Bisa memimpin",
   nama:"Hibah Dana Masyarakat (Damas) Penelitian",
   pemberi:"FK-KMK Universitas Gadjah Mada",
   tipe:"Internal UGM",
@@ -859,6 +951,8 @@ const KATALOG = [
 },
 {
   id:"dppm-kemdiktisaintek",
+  wilayah:"Indonesia",
+  peran:"Bisa memimpin",
   nama:"Program Penelitian dan Pengabdian kepada Masyarakat",
   pemberi:"DPPM, Kementerian Pendidikan Tinggi, Sains, dan Teknologi",
   tipe:"Nasional",
@@ -875,6 +969,8 @@ const KATALOG = [
 },
 {
   id:"grant-riset-ugm",
+  wilayah:"UGM",
+  peran:"Bisa memimpin",
   nama:"Grant Riset dan skema penelitian eksternal UGM",
   pemberi:"Universitas Gadjah Mada",
   tipe:"Internal UGM",
@@ -891,6 +987,8 @@ const KATALOG = [
 },
 {
   id:"riim-kompetisi",
+  wilayah:"Indonesia",
+  peran:"Bisa memimpin",
   nama:"RIIM Kompetisi",
   pemberi:"BRIN dan LPDP",
   tipe:"Nasional",
@@ -907,6 +1005,8 @@ const KATALOG = [
 },
 {
   id:"prima",
+  wilayah:"Indonesia",
+  peran:"Bisa memimpin",
   nama:"PRIMA - Program Riset Kebijakan Pembangunan Merah Putih",
   pemberi:"BRIN dan LPDP",
   tipe:"Nasional",
@@ -923,6 +1023,8 @@ const KATALOG = [
 },
 {
   id:"rispro-lpdp",
+  wilayah:"Indonesia",
+  peran:"Perlu dicek",
   nama:"RISPRO - Riset Inovatif Produktif",
   pemberi:"LPDP, Kementerian Keuangan",
   tipe:"Nasional",
@@ -939,6 +1041,8 @@ const KATALOG = [
 },
 {
   id:"dipi",
+  wilayah:"Indonesia",
+  peran:"Perlu dicek",
   nama:"Indonesian Science Fund (DIPI)",
   pemberi:"Dana Ilmu Pengetahuan Indonesia",
   tipe:"Nasional",
@@ -959,6 +1063,8 @@ const KATALOG = [
    ============================================================ */
 {
   id:"amed",
+  wilayah:"Jepang",
+  peran:"Perlu dicek",
   nama:"Skema riset internasional AMED",
   pemberi:"Japan Agency for Medical Research and Development",
   tipe:"Internasional",
@@ -975,6 +1081,8 @@ const KATALOG = [
 },
 {
   id:"jsps",
+  wilayah:"Jepang",
+  peran:"Mitra saja",
   nama:"Core-to-Core Program dan skema kerja sama JSPS",
   pemberi:"Japan Society for the Promotion of Science",
   tipe:"Internasional",
@@ -991,6 +1099,8 @@ const KATALOG = [
 },
 {
   id:"fleming",
+  wilayah:"Inggris",
+  peran:"Perlu dicek",
   nama:"Fleming Fund",
   pemberi:"Department of Health and Social Care, Inggris",
   tipe:"Internasional",
@@ -1007,6 +1117,8 @@ const KATALOG = [
 },
 {
   id:"dfat-australia",
+  wilayah:"Australia",
+  peran:"Perlu dicek",
   nama:"Program kesehatan bilateral Australia-Indonesia",
   pemberi:"DFAT Australia",
   tipe:"Internasional",
@@ -1023,6 +1135,8 @@ const KATALOG = [
 },
 {
   id:"daad",
+  wilayah:"Jerman",
+  peran:"Mitra saja",
   nama:"Skema kerja sama riset dan mobilitas DAAD",
   pemberi:"Deutscher Akademischer Austauschdienst",
   tipe:"Internasional",
@@ -1043,6 +1157,8 @@ const KATALOG = [
    ============================================================ */
 {
   id:"nihr-ghr",
+  wilayah:"Inggris",
+  peran:"Tidak layak",
   nama:"Global Health Research - program, fellowship, dan panggilan AMR",
   pemberi:"NIHR, Inggris",
   tipe:"Internasional",
@@ -1059,6 +1175,8 @@ const KATALOG = [
 },
 {
   id:"edctp3",
+  wilayah:"Uni Eropa",
+  peran:"Mitra saja",
   nama:"Global Health EDCTP3 Work Programme",
   pemberi:"Global Health EDCTP3 Joint Undertaking, Horizon Europe",
   tipe:"Internasional",
@@ -1075,6 +1193,8 @@ const KATALOG = [
 },
 {
   id:"ecf-rise",
+  wilayah:"Amerika Serikat",
+  peran:"Tidak layak",
   nama:"RISE for Nutrition",
   pemberi:"Eleanor Crook Foundation",
   tipe:"Internasional",
@@ -1134,57 +1254,92 @@ function siklusBerikut(g){
 }
 
 /* ========================= RENDER ENTRI ========================= */
+const ST_LABEL={mendesak:"Tutup segera",terbuka:"Terbuka",berulang:"Berulang",tertutup:"Sudah tutup",pantau:"Pantau","tidak-layak":"Di luar cakupan"};
+const ST_CLASS={mendesak:"st-urgent",terbuka:"st",berulang:"st-cycle",tertutup:"st-off",pantau:"st-cycle","tidak-layak":"st-off"};
+const ROLE_CLASS={"Bisa memimpin":"role","Perorangan":"role","Mitra saja":"role-alt","Perlu dicek":"role-alt","Tidak layak":"role-off"};
+
 function renderEntry(g){
   const st=status(g);
-  let cls="", kiri="";
-  if(st==="mendesak"){
-    cls="e-urgent";
-    const h=hariKe(g.tenggat);
-    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>"+(h===0?"tutup hari ini":h+" hari lagi")+"</span>";
-  }else if(st==="terbuka"){
-    cls="e-open";
-    const h=hariKe(g.tenggat);
-    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>"+h+" hari lagi</span>";
+  let cls="",kiri="";
+  if(st==="mendesak"||st==="terbuka"){
+    cls=st==="mendesak"?"e-urgent":"e-open";
+    const hr=hariKe(g.tenggat);
+    kiri="<b>"+hr+"</b><span class='rel'>"+(hr===0?"HARI INI":"HARI LAGI")+"</span>";
   }else if(st==="tertutup"){
     cls="e-closed";
-    kiri="<b>"+d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+"</b><span class='rel'>sudah tutup</span>";
+    kiri="<b>"+Math.abs(hariKe(g.tenggat))+"</b><span class='rel'>HARI LALU</span>";
   }else if(st==="berulang"){
     const s=siklusBerikut(g);
-    kiri="<b>"+BULAN_S[s.bulan-1]+"</b><span class='rel'>siklus historis</span>";
+    kiri="<b>"+BULAN_S[s.bulan-1]+"</b><span class='rel'>SIKLUS</span>";
   }else if(st==="tidak-layak"){
-    cls="e-closed";
-    kiri="<b>-</b><span class='rel'>di luar cakupan</span>";
+    cls="e-closed"; kiri="<b>&ndash;</b><span class='rel'>DI LUAR</span>";
   }else{
-    kiri="<b>-</b><span class='rel'>jadwal belum jelas</span>";
+    kiri="<b>&ndash;</b><span class='rel'>PANTAU</span>";
   }
 
-  const vLabel={resmi:"sumber resmi",sekunder:"sumber sekunder",belum:"belum diverifikasi"}[g.verifikasi];
-  const fitLabel=["Di luar cakupan","Kecocokan rendah","Kecocokan sedang","Kecocokan tinggi"][g.fit];
-
-  const judul = g.url
-    ? "<a href='"+esc(g.url)+"' target='_blank' rel='noopener'>"+esc(g.nama)+"</a>"
-    : esc(g.nama);
+  const vLabel={resmi:"Sumber resmi",sekunder:"Sumber sekunder",belum:"Belum diverifikasi"}[g.verifikasi];
+  const judul=g.url?"<a href='"+esc(g.url)+"' target='_blank' rel='noopener'>"+esc(g.nama)+"</a>":esc(g.nama);
+  let tanggal="Tanpa tenggat pasti";
+  if(g.tenggat) tanggal=d(g.tenggat).getDate()+" "+BULAN_S[d(g.tenggat).getMonth()]+" "+d(g.tenggat).getFullYear();
+  else if(g.siklus.length) tanggal="Biasanya "+g.siklus.map(m=>BULAN_S[m-1]).join(", ");
 
   return "<article class='entry "+cls+"' data-id='"+g.id+"'>"
     + "<div class='when'>"+kiri+"</div>"
     + "<div class='body'>"
     +   "<h3>"+judul+"</h3>"
-    +   "<p class='funder'>"+esc(g.pemberi)+" · "+esc(g.nilai)+"</p>"
+    +   "<p class='funder'>"+esc(g.pemberi)+" &middot; "+esc(g.wilayah)+"</p>"
     +   "<p class='note'>"+esc(g.catatan)+"</p>"
-    +   (g.peringatan ? "<p class='warn'>"+esc(g.peringatan)+"</p>" : "")
+    +   (g.peringatan?"<p class='warn'>"+esc(g.peringatan)+"</p>":"")
     +   "<div class='tags'>"
-    +     "<span class='tag fit"+g.fit+"'>"+fitLabel+"</span>"
+    +     "<span class='tag "+ST_CLASS[st]+"'>"+ST_LABEL[st]+"</span>"
+    +     "<span class='tag "+ROLE_CLASS[g.peran]+"'>"+esc(g.peran)+"</span>"
     +     "<span class='tag v-"+g.verifikasi+"'>"+vLabel+"</span>"
-    +     "<span class='tag'>"+esc(g.tipe)+"</span>"
     +     g.fokus.map(f=>"<span class='tag'>"+esc(f)+"</span>").join("")
-    +     "<button class='addbtn' type='button' data-add='"+g.id+"'>Masukkan ke pipeline</button>"
     +   "</div>"
+    + "</div>"
+    + "<div class='meta'>"
+    +   "<span class='amt'>"+esc(g.nilai)+"</span>"
+    +   esc(g.durasi)
+    +   "<span class='dt'>"+esc(tanggal)+"</span>"
+    +   "<button class='addbtn' type='button' data-add='"+g.id+"'>Ke pipeline</button>"
     + "</div></article>";
 }
 
 function paint(el,arr,kosong){
-  el.innerHTML = arr.length ? arr.map(renderEntry).join("")
-    : "<p class='empty'>"+kosong+"</p>";
+  el.innerHTML=arr.length?arr.map(renderEntry).join(""):"<p class='empty'>"+kosong+"</p>";
+}
+
+/* ========================= KARTU RINGKASAN ========================= */
+function buildKPI(){
+  const berTenggat=KATALOG.filter(g=>g.tenggat&&hariKe(g.tenggat)>=0);
+  const d30=berTenggat.filter(g=>hariKe(g.tenggat)<=30).length;
+  const d90=berTenggat.filter(g=>hariKe(g.tenggat)<=90).length;
+  const siap=KATALOG.filter(g=>status(g)==="berulang"&&siklusBerikut(g).jarak<=4).length;
+  const pimpin=KATALOG.filter(g=>g.peran==="Bisa memimpin").length;
+  const perluCek=KATALOG.filter(g=>g.verifikasi==="belum"||(g.tenggat&&hariKe(g.tenggat)<0)).length;
+  const kartu=[
+    ["k-signal",berTenggat.length,"panggilan dengan tenggat terbuka"],
+    ["k-alert",d30,"tutup dalam 30 hari"],
+    ["k-signal",d90,"tutup dalam 90 hari"],
+    ["k-calm",siap,"siklus dibuka dalam 4 bulan"],
+    ["k-ink",pimpin,"skema yang bisa dipimpin PKT"],
+    ["k-alert",perluCek,"entri perlu diverifikasi ulang"],
+    ["k-calm",pipe.length,"ada di pipeline tim"]
+  ];
+  document.getElementById("kpis").innerHTML=kartu.map(([c,n,l])=>
+    "<div class='kpi "+c+"'><b>"+n+"</b><span>"+l+"</span></div>").join("");
+}
+
+/* ========================= PENGHITUNG TAB ========================= */
+function buildCounts(){
+  const set=(id,v)=>{const el=document.getElementById(id); if(el) el.textContent=v;};
+  set("c-radar",KATALOG.filter(g=>["terbuka","mendesak"].includes(status(g))).length
+      + KATALOG.filter(g=>status(g)==="berulang"&&siklusBerikut(g).jarak<=4).length);
+  set("c-cari",KATALOG.length);
+  set("c-siklus",KATALOG.filter(g=>g.siklus.length).length);
+  set("c-pipeline",pipe.length);
+  set("c-kelayakan",KATALOG.filter(g=>g.peringatan||g.fit===0).length);
+  set("c-update",KATALOG.filter(g=>g.verifikasi==="belum"||(g.tenggat&&hariKe(g.tenggat)<0)).length);
 }
 
 /* ========================= RADAR ========================= */
@@ -1206,36 +1361,57 @@ function buildRadar(){
     "Tidak ada panggilan yang tutup dalam 120 hari terakhir.");
 }
 
-/* ========================= STRIP 12 BULAN ========================= */
+/* ========================= GARIS WAKTU 12 BULAN ========================= */
 function buildStrip(){
-  const strip=document.getElementById("strip");
   const start=new Date(NOW.getFullYear(),NOW.getMonth(),1);
   const end=new Date(start.getFullYear(),start.getMonth()+12,1);
   const span=end-start;
-  document.getElementById("stripRange").textContent =
-    BULAN_S[start.getMonth()]+" "+start.getFullYear()+" - "+BULAN_S[(start.getMonth()+11)%12]+" "+(new Date(start.getFullYear(),start.getMonth()+11,1)).getFullYear();
+  const akhir=new Date(start.getFullYear(),start.getMonth()+11,1);
+  document.getElementById("stripRange").textContent=
+    BULAN_S[start.getMonth()]+" "+start.getFullYear()+" sampai "+BULAN_S[akhir.getMonth()]+" "+akhir.getFullYear();
 
-  let html="";
-  for(let i=0;i<12;i++){
-    const m=new Date(start.getFullYear(),start.getMonth()+i,1);
-    html+="<div class='strip-month' style='left:"+((m-start)/span*100)+"%'>"+BULAN_S[m.getMonth()]+"</div>";
-  }
+  const titik=[];
   KATALOG.forEach(g=>{
     const st=status(g);
     let when=null,kind="";
-    if(st==="terbuka"||st==="mendesak"){ when=d(g.tenggat); kind=st==="mendesak"?"t-urgent":"t-open"; }
-    else if(st==="berulang"){
-      const s=siklusBerikut(g);
-      when=new Date(start.getFullYear(),start.getMonth()+s.jarak,15);
-    }
+    if(st==="terbuka"||st==="mendesak"){when=d(g.tenggat);kind=st==="mendesak"?"t-urgent":"t-open";}
+    else if(st==="berulang"){const s=siklusBerikut(g);when=new Date(start.getFullYear(),start.getMonth()+s.jarak,15);}
     if(!when||when<start||when>=end) return;
-    const left=(when-start)/span*100;
-    const h=(st==="berulang")?40:60;
-    html+="<button class='tick "+kind+"' style='left:"+left+"%;height:"+h+"%' "
-       +"title='"+esc(g.nama)+" - "+esc(g.pemberi)+"' data-goto='"+g.id+"' aria-label='"+esc(g.nama)+"'></button>";
+    titik.push({g,kind,pct:(when-start)/span*100});
   });
-  strip.innerHTML=html;
+  titik.sort((a,b)=>a.pct-b.pct);
+
+  /* susun label bertingkat supaya tidak bertumpuk */
+  const lebar=document.querySelector(".strip").clientWidth||1000;
+  const pctLabel=104/lebar*100;
+  const barisAkhir=[];
+  titik.forEach(t=>{
+    let r=0;
+    while(barisAkhir[r]!==undefined && t.pct < barisAkhir[r]+pctLabel) r++;
+    barisAkhir[r]=t.pct; t.baris=r;
+  });
+  const maxBaris=barisAkhir.length;
+  const tinggiBaris=26;
+
+  const labels=document.getElementById("stripLabels");
+  labels.style.height=Math.max(1,maxBaris)*tinggiBaris+8+"px";
+  labels.innerHTML=titik.map(t=>{
+    const top=(maxBaris-1-t.baris)*tinggiBaris;
+    const bawah=(t.baris)*tinggiBaris+tinggiBaris;
+    return "<button class='slab' style='left:"+t.pct+"%;top:"+top+"px;height:"+bawah+"px' "
+      +"data-goto='"+t.g.id+"' title='"+esc(t.g.nama)+" - "+esc(t.g.pemberi)+"'>"+esc(t.g.nama)+"</button>";
+  }).join("");
+
+  let ax="";
+  for(let i=0;i<12;i++){
+    const m=new Date(start.getFullYear(),start.getMonth()+i,1);
+    ax+="<div class='strip-month' style='left:"+((m-start)/span*100)+"%'>"+BULAN_S[m.getMonth()]+"</div>";
+  }
+  ax+=titik.map(t=>"<button class='tick "+t.kind+"' style='left:"+t.pct+"%' "
+     +"data-goto='"+t.g.id+"' aria-label='"+esc(t.g.nama)+"' title='"+esc(t.g.nama)+"'></button>").join("");
+  document.getElementById("stripAxis").innerHTML=ax;
 }
+window.addEventListener("resize",()=>{clearTimeout(window._rz);window._rz=setTimeout(buildStrip,180);});
 
 /* ========================= CARI ========================= */
 const fFokus=document.getElementById("fFokus"),
@@ -1303,6 +1479,7 @@ let pipe=[];
 try{ pipe=JSON.parse(localStorage.getItem(KEY)||"[]"); if(!Array.isArray(pipe)) pipe=[]; }
 catch(e){ pipe=[]; }
 
+function refreshAll(){ try{buildKPI();buildCounts();}catch(e){} }
 function savePipe(){
   try{ localStorage.setItem(KEY,JSON.stringify(pipe)); }
   catch(e){ toast("Penyimpanan peramban tidak tersedia - ekspor JSON untuk menyimpan."); }
@@ -1330,7 +1507,7 @@ document.getElementById("pAdd").addEventListener("click",()=>{
   if(!nama){ toast("Isi nama skema dulu."); return; }
   pipe.push({id:"p"+Date.now(),nama,owner:document.getElementById("pOwner").value.trim(),
              due:document.getElementById("pDue").value||null,tahap:0});
-  savePipe(); buildPipe();
+  savePipe(); buildPipe(); refreshAll();
   document.getElementById("pName").value="";document.getElementById("pOwner").value="";document.getElementById("pDue").value="";
   toast("Ditambahkan ke pipeline.");
 });
@@ -1338,8 +1515,8 @@ document.getElementById("pipeGrid").addEventListener("click",e=>{
   const mv=e.target.dataset.mv, del=e.target.dataset.del;
   if(mv){ const p=pipe.find(x=>x.id===mv);
     p.tahap=Math.max(0,Math.min(TAHAP.length-1,p.tahap+Number(e.target.dataset.dir)));
-    savePipe(); buildPipe(); }
-  if(del){ pipe=pipe.filter(x=>x.id!==del); savePipe(); buildPipe(); toast("Dihapus."); }
+    savePipe(); buildPipe(); refreshAll(); }
+  if(del){ pipe=pipe.filter(x=>x.id!==del); savePipe(); buildPipe(); refreshAll(); toast("Dihapus."); }
 });
 document.getElementById("pExport").addEventListener("click",()=>{
   const blob=new Blob([JSON.stringify(pipe,null,2)],{type:"application/json"});
@@ -1355,7 +1532,7 @@ document.getElementById("pImport").addEventListener("change",e=>{
   r.onload=()=>{ try{
       const arr=JSON.parse(r.result);
       if(!Array.isArray(arr)) throw 0;
-      pipe=arr; savePipe(); buildPipe(); toast("Pipeline dimuat dari berkas.");
+      pipe=arr; savePipe(); buildPipe(); refreshAll(); toast("Pipeline dimuat dari berkas.");
     }catch(err){ toast("Berkas tidak terbaca sebagai pipeline JSON."); } };
   r.readAsText(f);
 });
@@ -1406,7 +1583,7 @@ document.querySelectorAll(".tab").forEach(t=>{
     window.scrollTo({top:0,behavior:"instant"});
   });
 });
-document.getElementById("strip").addEventListener("click",e=>{
+document.querySelector(".strip").addEventListener("click",e=>{
   const id=e.target.dataset.goto; if(!id) return;
   document.querySelector('.tab[data-panel="cari"]').click();
   q.value=KATALOG.find(g=>g.id===id).nama; buildCari();
@@ -1419,7 +1596,7 @@ document.getElementById("themeBtn").addEventListener("click",()=>{
 });
 
 /* ========================= INIT ========================= */
-buildRadar(); buildStrip(); buildCari(); buildSiklus(); buildPipe(); buildStale();
+buildRadar(); buildPipe(); buildStrip(); buildCari(); buildSiklus(); buildKPI(); buildCounts(); buildStale();
 </script>
 </body>
 </html>
