@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar Hibah Kedokteran Tropis - PKT UGM</title>
-<meta name="description" content="Katalog 43 skema pendanaan riset kedokteran tropis dan kesehatan global untuk Center for Tropical Medicine, FK-KMK UGM. Tenggat terverifikasi, siklus tahunan, dan pipeline tim.">
+<meta name="description" content="Katalog skema pendanaan riset kedokteran tropis, penyakit menular, One Health, dan AI untuk kesehatan yang dapat diakses Center for Tropical Medicine, FK-KMK UGM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -89,8 +89,9 @@ h1{
 .strip-head{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink-faint);margin-bottom:10px}
 .strip{position:relative;border-bottom:1px solid var(--line)}
 .strip-labels{position:relative}
-.slab{position:absolute;font-size:10.5px;line-height:1.25;color:var(--ink-soft);width:104px;padding-left:5px;border-left:1px solid var(--line-soft);cursor:pointer;background:none;text-align:left;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.slab{position:absolute;font-size:10px;line-height:1.3;color:var(--ink-soft);width:104px;height:26px;padding:0 4px 0 5px;border:none;border-left:1px solid var(--line);cursor:pointer;background:none;text-align:left;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-word}
 .slab:hover,.slab:focus-visible{color:var(--ink);border-left-color:var(--ink)}
+.leader{position:absolute;width:0;border-left:1px solid var(--line-soft);pointer-events:none}
 .strip-axis{position:relative;height:26px;border-top:1px solid var(--line-soft)}
 .strip-month{position:absolute;top:0;bottom:0;border-left:1px solid var(--line-soft);font-size:10.5px;color:var(--ink-faint);padding:6px 0 0 5px;white-space:nowrap}
 .strip-month:first-child{border-left:none}
@@ -218,7 +219,7 @@ pre{background:var(--surface);border:1px solid var(--line-soft);border-radius:3p
   <div class="wrap mast">
     <div>
       <h1>Radar Hibah Kedokteran Tropis</h1>
-      <p class="sub">Skema pendanaan yang dapat diakses oleh Center for Tropical Medicine, FK-KMK UGM </p>
+      <p class="sub">Skema pendanaan yang dapat diakses oleh Center for Tropical Medicine, FK-KMK UGM</p>
     </div>
     <div class="mast-meta">
       <div id="asOf"></div>
@@ -1210,6 +1211,313 @@ const KATALOG = [
   url:"https://eleanorcrookfoundation.org/how-we-invest/grantmaking"
 }
 
+,
+{
+  id:"ipsn-catalytic",
+  wilayah:"WHO / PBB",
+  peran:"Bisa memimpin",
+  nama:"Catalytic Grant Fund",
+  pemberi:"International Pathogen Surveillance Network, WHO",
+  tipe:"Internasional",
+  fokus:["Surveilans genomik","Penyakit menular","Sistem & keamanan kesehatan"],
+  nilai:"USD 50.000 - 250.000 per hibah",
+  durasi:"Hingga 12 bulan",
+  tenggat:null,
+  siklus:[4,5],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Dua jalur teknis: surveilans genomik patogen, serta surveilans air limbah dan lingkungan. Dana dikelola UN Foundation atas nama IPSN dengan dukungan Gates Foundation, Rockefeller Foundation, Wellcome, dan Institute of Philanthropy. Siklus 2026/2027 diumumkan 17 April 2026. PKT sudah menyiapkan concept note pada Mei 2026, sehingga materinya tinggal diperbarui untuk siklus berikutnya.",
+  peringatan:"Pendanaan hanya untuk organisasi anggota IPSN dari LMIC, atau konsorsium yang dipimpin anggota IPSN yang berdomisili di LMIC. Organisasi bukan anggota dapat mendaftar keanggotaan bersamaan dengan proposal. Pemimpin yang sudah didanai pada ronde sebelumnya tidak layak pada ronde berikutnya.",
+  url:"https://www.who.int/news-room/articles-detail/catalytic-grant-fund-application-cycle-2026-2027"
+},
+{
+  id:"ai4pep",
+  wilayah:"Kanada / Global",
+  peran:"Bisa memimpin",
+  nama:"Call for Ideas",
+  pemberi:"AI4PEP, didukung IDRC",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Sistem & keamanan kesehatan","Penyakit menular"],
+  nilai:"Belum diverifikasi",
+  durasi:"Bertahap; Phase 1 sebagai penyaring",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Jaringan kecerdasan buatan untuk kesiapsiagaan darurat kesehatan masyarakat. Indonesia termasuk negara yang layak bersama negara Asia dan Afrika lain. Proposal hanya diminta untuk Phase 1, dan setiap proposal harus memenuhi persyaratan izin negara masing-masing. PKT sudah punya jejak dengan jaringan ini lewat proposal WHO TDR Impact Grant 2025 berlabel AI4PEP.",
+  peringatan:"Nilai hibah dan jadwal panggilan belum diverifikasi di halaman resmi. Hubungan kelembagaan yang sudah ada membuat jalur ini lebih cepat dibanding memulai dari nol.",
+  url:"https://ai4pep.org/funding/"
+},
+{
+  id:"ai-health-eval",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
+  nama:"Evaluasi alat AI kesehatan yang dipimpin negara",
+  pemberi:"Gates Foundation, Novo Nordisk Foundation, dan Wellcome",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Sistem & keamanan kesehatan","Riset implementasi & kebijakan"],
+  nilai:"Investasi gabungan USD 60 juta untuk keseluruhan program",
+  durasi:"Belum diverifikasi",
+  tenggat:null,
+  siklus:[2],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Kemitraan tiga lembaga yang diumumkan 20 Februari 2026 untuk mendanai evaluasi alat AI kesehatan yang dipimpin peneliti lokal di LMIC. Panggilan pertama berfokus pada alat AI yang sudah matang dan mendukung pengambilan keputusan di layanan primer dan komunitas. Ini sangat sejalan dengan TBScreen.AI dan pekerjaan informatika kesehatan PKT.",
+  peringatan:"Nilai hibah per proyek dan jadwal panggilan berikutnya belum diverifikasi. Fokusnya evaluasi alat yang sudah matang, bukan pengembangan algoritma baru.",
+  url:"https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/02/ai-impact-health"
+},
+{
+  id:"nih-mhealth",
+  wilayah:"Amerika Serikat",
+  peran:"Bisa memimpin",
+  nama:"Mobile Health: Technology and Outcomes in LMICs (R21/R33)",
+  pemberi:"National Institutes of Health",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Riset implementasi & kebijakan","Sistem & keamanan kesehatan"],
+  nilai:"Skala R21 dan R33 NIH",
+  durasi:"Bertahap R21 lalu R33",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Mendanai pengembangan, validasi, dan uji efektivitas intervensi mHealth yang dirancang khusus untuk LMIC, sekaligus memperkuat kapasitas riset mHealth di sana. Aplikasi boleh diajukan institusi asing di LMIC yang layak, atau institusi AS yang berkolaborasi dengan institusi LMIC.",
+  peringatan:"Institusi Indonesia dapat menjadi pengusul langsung, tetapi butuh registrasi SAM.gov dan UEI yang aktif. Proses ini sedang berjalan di PKT lewat UEI UGM. Informasi berasal dari agregator; verifikasi teks pengumuman resmi di NIH sebelum menyusun.",
+  url:"https://www.fic.nih.gov/"
+},
+{
+  id:"fogarty-digital",
+  wilayah:"Amerika Serikat",
+  peran:"Bisa memimpin",
+  nama:"Digital Health Technology and Reciprocal Innovation",
+  pemberi:"Fogarty International Center, NIH",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Riset implementasi & kebijakan","Penguatan kapasitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Belum diverifikasi",
+  tenggat:"2027-02-11",
+  siklus:[2],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"Menuntut metodologi inovasi resiprokal, yaitu pertukaran gagasan dan pendekatan dua arah antara Amerika Serikat dan satu negara LMIC untuk menjawab tantangan kesehatan bersama. Entitas non-AS termasuk institusi asing tercantum sebagai pelamar yang layak. Tanggal perkiraan pengumuman 1 Desember 2026 dengan tenggat perkiraan 11 Februari 2027.",
+  peringatan:"Tanggal masih berstatus perkiraan pada portal peluang, bukan tenggat final. Registrasi SAM.gov wajib rampung jauh sebelum tanggal pengajuan.",
+  url:"https://simpler.grants.gov/opportunity/52596a75-bd24-4f15-a996-b8fae56e392c"
+},
+{
+  id:"tdr-ir-fellowship",
+  wilayah:"WHO / PBB",
+  peran:"Perorangan",
+  nama:"Implementation Research Leadership Fellowship",
+  pemberi:"TDR, diselenggarakan di FK-KMK UGM",
+  tipe:"Regional",
+  fokus:["Riset implementasi & kebijakan","Karier peneliti","Penguatan kapasitas"],
+  nilai:"Beasiswa fellowship",
+  durasi:"Satu tahun akademik",
+  tenggat:null,
+  siklus:[12],
+  fit:3,
+  verifikasi:"resmi",
+  catatan:"FK-KMK UGM adalah tuan rumah program ini sekaligus pendukung TDR Postgraduate Training Scheme dan Research Training Centres. Panggilan untuk tahun akademik 2026/2027 sudah terbit. Hanya pelamar dari LMIC di kawasan WHO Asia Tenggara, Pasifik Barat, atau Mediterania Timur yang layak.",
+  peringatan:"Karena UGM adalah penyelenggara, staf PKT perlu memastikan tidak ada benturan kepentingan sebelum mendorong kandidat internal melamar. Program ini juga jalur bagus untuk menarik kandidat regional ke Yogyakarta.",
+  url:"https://tdr.who.int/"
+},
+{
+  id:"coefficient-ai",
+  wilayah:"Global",
+  peran:"Bisa memimpin",
+  nama:"Global Health and Wellbeing in an Era of Transformative AI",
+  pemberi:"Coefficient Giving",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Riset implementasi & kebijakan","Sistem & keamanan kesehatan"],
+  nilai:"Eksploratori di bawah USD 100.000; standar USD 100.000 - 1 juta",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[8],
+  fit:2,
+  verifikasi:"resmi",
+  catatan:"Mendanai proyek riset dan penulisan, studi pemetaan, prototipe, serta kerja kebijakan singkat pada persinggungan AI dan kesehatan global. Termasuk fellowship kebijakan yang ditempatkan di lembaga tuan rumah seperti think tank atau badan pemerintah LMIC, serta penilaian kesiapan infrastruktur publik digital di negara LMIC berisiko tinggi. Aplikasi ditinjau bergulir.",
+  peringatan:"Ronde yang tercatat menutup 21 Agustus 2026, tetapi peninjauannya bergulir. Orientasinya lebih ke kebijakan dan pemetaan daripada riset lapangan klinis.",
+  url:"https://coefficientgiving.org/funds/global-health-wellbeing-opportunities/request-for-proposals-global-health-and-wellbeing-in-an-era-of-transformative-ai/"
+},
+{
+  id:"grants-gov-federal",
+  wilayah:"Amerika Serikat",
+  peran:"Bisa memimpin",
+  nama:"Hibah federal Amerika Serikat lewat Grants.gov",
+  pemberi:"NIH, CDC, USAID, dan lembaga federal lain",
+  tipe:"Internasional",
+  fokus:["Penyakit menular","Sistem & keamanan kesehatan","Penguatan kapasitas"],
+  nilai:"Bervariasi sangat luas per pengumuman",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Kanal, bukan satu skema. Sejumlah pengumuman NIH dan lembaga federal lain membuka pintu bagi organisasi asing atau komponen asing dari organisasi AS. PKT sedang memproses peran Data Entry pada sistem SAM.gov menggunakan UEI UGM, yang merupakan prasyarat untuk seluruh jalur ini.",
+  peringatan:"Registrasi SAM.gov harus aktif dan diperbarui tahunan sebelum tanggal pengajuan, dan prosesnya bisa memakan waktu berminggu-minggu. Sejak 25 Mei 2026 NIH juga mewajibkan pelatihan keamanan riset untuk seluruh aplikasi. Baca bagian eligible applicants pada tiap pengumuman karena kelayakan asing tidak seragam.",
+  url:"https://simpler.grants.gov/"
+},
+{
+  id:"who-tender",
+  wilayah:"WHO / PBB",
+  peran:"Bisa memimpin",
+  nama:"Tender dan Request for Proposals WHO",
+  pemberi:"World Health Organization",
+  tipe:"Internasional",
+  fokus:["Sistem & keamanan kesehatan","Riset implementasi & kebijakan","Penyakit menular"],
+  nilai:"Bervariasi per RFP",
+  durasi:"Umumnya proyek pendek",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Kanal pengadaan, bukan hibah kompetitif. PKT sudah terdaftar sebagai pemasok WHO dan pernah menyiapkan proposal teknis untuk RFP WHO. Jalur ini bergerak cepat dengan tenggat pendek, jadi kesiapan dokumen legal dan template RAB menentukan.",
+  peringatan:"Status pemasok harus dijaga aktif, termasuk pembaruan data alamat yang diminta berkala. Karena ini pengadaan, aturan kontrak dan pembayarannya berbeda dari hibah riset.",
+  url:"https://www.who.int/"
+},
+{
+  id:"ditpui-ugm",
+  wilayah:"UGM",
+  peran:"Bisa memimpin",
+  nama:"Hibah Pengembangan Inovasi dan skema PUI",
+  pemberi:"Direktorat Pengembangan Usaha dan Inkubasi, UGM",
+  tipe:"Internal UGM",
+  fokus:["AI & data untuk kesehatan","Diagnostik & vaksin","Riset dasar & terapan"],
+  nilai:"Skala ratusan juta rupiah per komponen",
+  durasi:"Satu tahun anggaran",
+  tenggat:null,
+  siklus:[7,8],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"Jalur internal UGM untuk pengembangan prototipe dan hilirisasi inovasi. Tim TBScreen.AI memakai jalur ini pada 2026 dengan komponen bahan pembuatan prototipe sebagai pos anggaran terbesar. Cocok untuk membawa purwarupa dari riset ke tahap yang bisa diajukan ke pendana eksternal.",
+  peringatan:"Informasi berasal dari korespondensi internal, bukan pengumuman publik. Jadwal dan pagu perlu dikonfirmasi ke DITPUI setiap tahun.",
+  url:""
+},
+{
+  id:"sihi",
+  wilayah:"WHO / PBB",
+  peran:"Bisa memimpin",
+  nama:"Social Innovation in Health Initiative",
+  pemberi:"SIHI, berjejaring dengan TDR",
+  tipe:"Regional",
+  fokus:["Riset implementasi & kebijakan","Keterlibatan komunitas","Sistem & keamanan kesehatan"],
+  nilai:"Bervariasi per MOA tahunan",
+  durasi:"Kontrak tahunan",
+  tenggat:null,
+  siklus:[],
+  fit:3,
+  verifikasi:"sekunder",
+  catatan:"PKT menjalankan SIHI Indonesia sebagai bagian dari jaringan global inovasi sosial di bidang kesehatan, dengan mekanisme MOA tahunan yang dikoordinasikan lewat SIHI Filipina. Ini hubungan berjalan, bukan panggilan terbuka, sehingga pembaruan kontrak adalah titik masuk utamanya.",
+  peringatan:"Informasi berasal dari korespondensi internal. Nilai kontrak dan susunan tim per tahun perlu dikonfirmasi ke koordinator SIHI Indonesia.",
+  url:""
+},
+{
+  id:"fulbright-host",
+  wilayah:"Amerika Serikat",
+  peran:"Mitra saja",
+  nama:"Fulbright Scholar dan Specialist, sebagai institusi tuan rumah",
+  pemberi:"Program Fulbright, Amerika Serikat",
+  tipe:"Internasional",
+  fokus:["Karier peneliti","Konsorsium & kemitraan","Penguatan kapasitas"],
+  nilai:"Ditanggung program Fulbright, bukan hibah untuk tuan rumah",
+  durasi:"Beberapa bulan hingga satu tahun akademik",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Peneliti Amerika mencari afiliasi tuan rumah di Indonesia dan menghubungi PKT langsung, termasuk untuk topik ekologi nyamuk pesisir dan kesehatan anak untuk siklus 2027 sampai 2028. Menerima peran tuan rumah membawa keahlian dan jejaring tanpa membebani anggaran PKT.",
+  peringatan:"Ini bukan sumber dana bagi PKT. Permintaan sering datang mendadak dengan label mendesak, dan perlu koordinasi dengan Kantor Urusan Internasional UGM sebelum surat afiliasi diterbitkan.",
+  url:""
+},
+{
+  id:"heilbronn",
+  wilayah:"Jerman",
+  peran:"Mitra saja",
+  nama:"Kemitraan riset dengan Hochschule Heilbronn",
+  pemberi:"Hochschule Heilbronn, Jerman",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Konsorsium & kemitraan","Sistem & keamanan kesehatan"],
+  nilai:"Bergantung skema pendanaan Jerman yang dituju",
+  durasi:"Belum ditentukan",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"sekunder",
+  catatan:"Jalur kemitraan yang sedang dibangun bersama Prof. Wendelin Schramm untuk informatika dan ekonomi kesehatan. Draf aplikasi sedang disiapkan bersama bagian hukum universitas mitra.",
+  peringatan:"Skema pendanaan yang dituju belum teridentifikasi dalam katalog ini. Sebaiknya dipetakan ke skema DAAD, DFG, atau BMBF yang konkret supaya jadwalnya bisa dilacak.",
+  url:""
+},
+{
+  id:"erasmus-cbhe",
+  wilayah:"Uni Eropa",
+  peran:"Mitra saja",
+  nama:"Capacity Building in Higher Education dan skema Erasmus+ lain",
+  pemberi:"Erasmus+, Komisi Eropa",
+  tipe:"Internasional",
+  fokus:["Penguatan kapasitas","Konsorsium & kemitraan","Iklim & kesehatan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Umumnya 3 tahun",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"PKT dan UGM sudah terlibat dalam konsorsium pendidikan kesehatan planet CATA-Earth bersama UMC Utrecht, Universitas Indonesia, NSTU dan AUW di Bangladesh, serta mitra Spanyol. Skema Erasmus+ jenis ini mendanai pengembangan kurikulum dan kapasitas, bukan riset.",
+  peringatan:"Skema persis yang mendanai CATA-Earth serta jadwal panggilan Erasmus+ berikutnya belum diverifikasi. Perlu dicek ke koordinator konsorsium.",
+  url:""
+},
+{
+  id:"zayed-prize",
+  wilayah:"Uni Emirat Arab",
+  peran:"Bisa memimpin",
+  nama:"Zayed Sustainability Prize, kategori kesehatan",
+  pemberi:"Pemerintah Uni Emirat Arab",
+  tipe:"Internasional",
+  fokus:["Diagnostik & vaksin","Sistem & keamanan kesehatan"],
+  nilai:"Belum diverifikasi",
+  durasi:"Penghargaan, bukan hibah proyek",
+  tenggat:null,
+  siklus:[],
+  fit:1,
+  verifikasi:"belum",
+  catatan:"PKT pernah menyiapkan berkas untuk jalur ini terkait AI4PEP. Dicantumkan agar jejaknya tidak hilang.",
+  peringatan:"Kategori, kriteria, dan jadwal belum diverifikasi. Penghargaan semacam ini menuntut solusi yang sudah terbukti diterapkan, bukan proposal riset.",
+  url:""
+},
+{
+  id:"global-fund-tb",
+  wilayah:"Global / Indonesia",
+  peran:"Mitra saja",
+  nama:"Global Fund TB, lewat Principal Recipient nasional",
+  pemberi:"The Global Fund, disalurkan Konsorsium Penabulu-STPI",
+  tipe:"Nasional",
+  fokus:["Malaria, TB & NTD","Riset implementasi & kebijakan","Keterlibatan komunitas"],
+  nilai:"Belum diverifikasi",
+  durasi:"Mengikuti siklus alokasi Global Fund",
+  tenggat:null,
+  siklus:[],
+  fit:2,
+  verifikasi:"belum",
+  catatan:"Global Fund tidak mendanai universitas secara langsung di Indonesia; dana TB komunitas disalurkan lewat Principal Recipient nasional. Titik masuk PKT adalah menjadi sub-penerima atau mitra riset operasional.",
+  peringatan:"Mekanisme sub-penerima, jadwal, dan kelayakan universitas belum diverifikasi. Perlu ditelusuri lewat kontak Principal Recipient.",
+  url:""
+},
+{
+  id:"eit-health",
+  wilayah:"Uni Eropa",
+  peran:"Tidak layak",
+  nama:"Innovation Validation Call",
+  pemberi:"EIT Health",
+  tipe:"Internasional",
+  fokus:["AI & data untuk kesehatan","Diagnostik & vaksin"],
+  nilai:"Belum diverifikasi",
+  durasi:"Bervariasi",
+  tenggat:null,
+  siklus:[2],
+  fit:0,
+  verifikasi:"resmi",
+  catatan:"Mendanai validasi klinis teknologi medis digital dan berbasis AI yang sudah matang, menuju persetujuan regulator dan peluncuran pasar. Ronde 2026 dibuka 25 Februari dan menutup 6 Mei 2026.",
+  peringatan:"Konsorsium harus dipimpin perusahaan yang mengomersialkan produk, dan pesertanya berasal dari ekosistem EIT Health di Eropa. Dicatat agar tidak dikejar; relevan hanya bila ada mitra industri Eropa yang mengajak.",
+  url:"https://eithealth.eu/opportunity/innovation-validation/"
+}
 ];
 
 /* ========================= UTIL ========================= */
@@ -1362,6 +1670,8 @@ function buildRadar(){
 }
 
 /* ========================= GARIS WAKTU 12 BULAN ========================= */
+const LBL_W=104, LBL_H=26, ROW_GAP=6;
+
 function buildStrip(){
   const start=new Date(NOW.getFullYear(),NOW.getMonth(),1);
   const end=new Date(start.getFullYear(),start.getMonth()+12,1);
@@ -1381,25 +1691,28 @@ function buildStrip(){
   });
   titik.sort((a,b)=>a.pct-b.pct);
 
-  /* susun label bertingkat supaya tidak bertumpuk */
-  const lebar=document.querySelector(".strip").clientWidth||1000;
-  const pctLabel=104/lebar*100;
-  const barisAkhir=[];
+  /* susun bertingkat: satu baris hanya menampung label yang jaraknya cukup */
+  const lebar=document.querySelector(".strip").clientWidth||1080;
+  const jarakMin=(LBL_W+8)/lebar*100;
+  const isiBaris=[];
   titik.forEach(t=>{
     let r=0;
-    while(barisAkhir[r]!==undefined && t.pct < barisAkhir[r]+pctLabel) r++;
-    barisAkhir[r]=t.pct; t.baris=r;
+    while(isiBaris[r]!==undefined && t.pct-isiBaris[r] < jarakMin) r++;
+    isiBaris[r]=t.pct; t.baris=r;
   });
-  const maxBaris=barisAkhir.length;
-  const tinggiBaris=26;
+  const jmlBaris=Math.max(1,isiBaris.length);
+  const langkah=LBL_H+ROW_GAP;
+  const tinggi=jmlBaris*langkah;
 
   const labels=document.getElementById("stripLabels");
-  labels.style.height=Math.max(1,maxBaris)*tinggiBaris+8+"px";
+  labels.style.height=tinggi+"px";
   labels.innerHTML=titik.map(t=>{
-    const top=(maxBaris-1-t.baris)*tinggiBaris;
-    const bawah=(t.baris)*tinggiBaris+tinggiBaris;
-    return "<button class='slab' style='left:"+t.pct+"%;top:"+top+"px;height:"+bawah+"px' "
-      +"data-goto='"+t.g.id+"' title='"+esc(t.g.nama)+" - "+esc(t.g.pemberi)+"'>"+esc(t.g.nama)+"</button>";
+    const top=(jmlBaris-1-t.baris)*langkah;
+    const garisAtas=top+LBL_H;
+    const garisTinggi=tinggi-garisAtas;
+    return "<div class='leader' style='left:"+t.pct+"%;top:"+garisAtas+"px;height:"+garisTinggi+"px'></div>"
+      + "<button class='slab' style='left:"+t.pct+"%;top:"+top+"px' data-goto='"+t.g.id+"' "
+      + "title='"+esc(t.g.nama)+" - "+esc(t.g.pemberi)+"'>"+esc(t.g.nama)+"</button>";
   }).join("");
 
   let ax="";
@@ -1412,6 +1725,7 @@ function buildStrip(){
   document.getElementById("stripAxis").innerHTML=ax;
 }
 window.addEventListener("resize",()=>{clearTimeout(window._rz);window._rz=setTimeout(buildStrip,180);});
+window.addEventListener("load",()=>buildStrip());
 
 /* ========================= CARI ========================= */
 const fFokus=document.getElementById("fFokus"),
