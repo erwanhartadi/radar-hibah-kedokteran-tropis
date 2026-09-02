@@ -1,0 +1,51 @@
+name: Pantau hibah mingguan
+
+on:
+  schedule:
+    # Setiap Senin pukul 01.00 UTC, yaitu 08.00 WIB
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  pantau:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil isi repositori
+        uses: actions/checkout@v4
+
+      - name: Siapkan Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Jalankan pemeriksaan
+        id: periksa
+        run: node pantau/pantau.mjs
+
+      - name: Buat issue laporan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "${{ steps.periksa.outputs.judul }}" \
+            --body-file pantau/laporan.md \
+            --label "pantau-mingguan" || \
+          gh issue create \
+            --title "${{ steps.periksa.outputs.judul }}" \
+            --body-file pantau/laporan.md
+
+      - name: Simpan state pemeriksaan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pantau/state.json pantau/laporan.md
+          if git diff --staged --quiet; then
+            echo "Tidak ada perubahan state."
+          else
+            git commit -m "Pantau mingguan: perbarui state pemeriksaan"
+            git push
+          fi
